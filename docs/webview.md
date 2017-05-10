@@ -533,6 +533,7 @@ webview.html页面代码：
     <input type="button" value="点击测试" onclick="javascript:clickTest()" />
 </body>
 </html>
-```
+```  
+
 <img src="image/webview_1.png" width="250"/>    <img src="image/webview_2.png" width="250"/>
 
