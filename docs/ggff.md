@@ -197,7 +197,7 @@ animationSet数组格式中各个动画Json属性定义如下：
 ```javascript
 var = {};
 jsonData.fillAfter = 0;
-var animationSet = new Array(): Object;
+var animationSet = new Array();
 var opacityAni = {};
 opacityAni.type = "opacity";
 opacityAni.delay = 1000;
@@ -245,9 +245,9 @@ button.startAnimation(jsonData,function(code){
 示例： 
 
 ```javascript
-var = {};
+var jsonData= {};
 jsonData.fillAfter = 0;
-var animationSet = new Array(): Object;
+var animationSet = new Array();
 
 var transferAni = {};
 transferAni.type = "transfer";
@@ -300,9 +300,9 @@ button.startAnimation(jsonData,function(code){
 示例： 
 
 ```javascript
-var = {};
+var jsonData= {};
 jsonData.fillAfter = 0;
-var animationSet = new Array(): Object;
+var animationSet = new Array();
 
 var scaleAni = {};
 scaleAni.type = "scale";
@@ -352,12 +352,12 @@ button.startAnimation(jsonData,function(code){
 
 
 ```javascript  
-var = {};
+var jsonData= {};
 //这里设置从右下角旋转
 jsonData.pivotX = 1;
 jsonData.pivotY = 1;
 jsonData.fillAfter = 0;
-var animationSet = new Array(): Object;
+var animationSet = new Array();
 
 var rotateAni = {};
 rotateAni.type = "rotate";
@@ -393,12 +393,12 @@ callback：组件动画结束回调函数，可选参数，入参为Json对象�
 ```javascript
 
 //多种动画组合
-var = {};
+var jsonData= {};
 //这里设置从右下角旋转
 jsonData.pivotX = 1;
 jsonData.pivotY = 1;
 jsonData.fillAfter = 0;
-var animationSet = new Array(): Object;
+var animationSet = new Array();
 //缩放动画
 var scaleAni = {};
 scaleAni.type = "scale";
@@ -507,7 +507,7 @@ callback：组件动画结束回调函数，可选参数，入参为Json对象�
 
 //示例中，两个动画会按照先后顺序执行，其中动画一里面是组合动画
 
-var = {};
+var jsonData= {};
 var aniAry = new Array(): Object;
 //第一个动画，同时做缩放和旋转动画
 var jsonAni1 = {};
@@ -608,7 +608,7 @@ callback：组件动画结束回调函数，可选参数，入参为Json对象�
 示例：  
 
 ```javascript
-var = {};
+var jsonData= {};
 jsonData.type = "scale";
 jsonData.duration = 300;
 

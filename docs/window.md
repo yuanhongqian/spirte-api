@@ -31,7 +31,7 @@ var window = require("Window");
 > 
 > [getScreenHeight(): number  获取当前窗口绘制区域高度  ](#ff_6)
 > 
-> [executeScript(scriptText:string): void    设置窗口状态栏模式](#ff_7)  
+> [setStatusBarMode(mode:string): void   设置窗口状态栏模式](#ff_7)  
 > 
 >[ hideSip(): void   隐藏系统输入法  ](#ff_8)
 
