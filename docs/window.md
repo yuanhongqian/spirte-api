@@ -113,11 +113,10 @@ JsonData：传入打开新窗口参数，Json类型，定义如下：
 > 
 > statusBarColor：状态栏背景色，#rrggbb，默认值transparent透明色，注：android5.0及后续版本支持；
 > 
-> statusBarMode：状态栏前景模式，字符串枚举型号，[default,light] ， 仅iOS支持  
+> statusBarMode：状态栏前景模式,字符串枚举型号,【default,light】,iOS及Android 6.0及以上系统支持
+> - default：系统状态栏前景色（电池电量、时间、网络部分标识的颜色）为白色
 > 
-> - default：系统状态栏前景色（电池电量、时间、网络部分标识的颜色）为黑色
-> 
-> - light：系统状态栏前景色（电池电量、时间、网络部分标识的颜色）为白色
+> - light：系统状态栏前景色（电池电量、时间、网络部分标识的颜色）为黑色
 > 
 > orientation：当前页面横竖屏设置，字符串枚举型，可选项，若不设置则采用程序入口app.json应用配置文件中统一设置，[portrait, landscape,device]  
 > 
@@ -357,9 +356,9 @@ window.on("result",function(e,data){
 
 mode：状态栏前景模式，字符串枚举型号，[default,light],必选项  
 
-> default：系统状态栏前景色（电池电量、时间、网络部分标识的颜色）为黑色
+> default：系统状态栏前景色（电池电量、时间、网络部分标识的颜色）为白色
 > 
-> light：系统状态栏前景色（电池电量、时间、网络部分标识的颜色）为白色  
+> light：系统状态栏前景色（电池电量、时间、网络部分标识的颜色）为黑色  
 
 返回值：无  
 
