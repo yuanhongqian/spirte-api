@@ -195,7 +195,7 @@ animationSet数组格式中各个动画Json属性定义如下：
 示例：  
 
 ```javascript
-var = {};
+var jsonData= {};
 jsonData.fillAfter = 0;
 var animationSet = new Array();
 var opacityAni = {};
