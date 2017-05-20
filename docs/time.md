@@ -19,11 +19,11 @@ var time = require("Time");
 
 >[ setTimeout(callFunction:Function,timeout:number): string   启动单次定时器 ](#ff_0)
 > 
-> [ clearTimeout(id:string): void  关闭单次定时器 ](#ff_1)
+> [ clearTimeout(id:Time): void  关闭单次定时器 ](#ff_1)
 >
 >[ setInterval (callFunction:Function,interval:number): string   启动重复定时器  ](#ff_2)
 >
-> [clearInterval(id:string): void  关闭重复定时器 ](#ff_3)
+> [clearInterval(id:Time): void  关闭重复定时器 ](#ff_3)
 
 
 
@@ -45,7 +45,7 @@ timeout：延时时间，数字类型，单位毫秒
 
 
 
-<span id="ff_1">**clearTimeout(id:string): void**</span>  
+<span id="ff_1">**clearTimeout(id:Time): void**</span>  
 
 <code>关闭单次定时器</code>
 
@@ -72,7 +72,7 @@ interval：间隔时间，数字类型，单位毫秒
 返回值：定时器标识，字符串类型
 
 
-<span id="ff_3">**clearInterval(id:string): void**</span>  
+<span id="ff_3">**clearInterval(id:Time): void**</span>  
 
 <code>关闭重复定时器</code>  
 

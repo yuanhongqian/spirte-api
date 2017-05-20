@@ -508,7 +508,7 @@ callback：组件动画结束回调函数，可选参数，入参为Json对象�
 //示例中，两个动画会按照先后顺序执行，其中动画一里面是组合动画
 
 var jsonData= {};
-var aniAry = new Array(): Object;
+var aniAry = new Array();
 //第一个动画，同时做缩放和旋转动画
 var jsonAni1 = {};
 jsonAni1.delay = 0;
@@ -612,7 +612,7 @@ var jsonData= {};
 jsonData.type = "scale";
 jsonData.duration = 300;
 
-var settings = new Array(): Object;
+var settings = new Array();
 
 var json = {};
 json.value = 0.01;
