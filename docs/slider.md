@@ -146,9 +146,7 @@ param：当前被选中的页面下标索引，数字类型
 
 **注：**    
 
-- 该事件在页面loaded初始化完成的时候就会监听一次，以后每次滑动页面都会执行( 如果在animator 里面监听，页面加载时会监听不到 )。
-
-- 该事件不能放在document.refresh()刷新方法之后监听，建议使用时放在开始位置执行。
+- 该事件在页面animator完成的时候进行监听，如果slider控件是动态加载的，该事件会在执行sliderdom.refresh()后自动监听一次。
 
 
 **pageScrollStateChanged**  
