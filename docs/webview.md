@@ -398,11 +398,11 @@ document.addEventListener("plusready", function () {
 
             var item= {};
             itemJson.text = "网页html";
-            datas.push(itemJson:string): Object;
+            datas.push(itemJson);
 
             var item= {};
             itemJson.text = "本地html";
-            datas.push(itemJson:string): Object;
+            datas.push(itemJson);
 
             json.datas = datas;
             tabbarid1.loadData(json);

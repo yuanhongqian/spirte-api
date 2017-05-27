@@ -1084,7 +1084,7 @@ domObj：当前js运行环境对象，可选参数，component模板中使用，
 
 - 该法设置class后，以前的通过class设置的样式会全部清除，不过style设置的不会清除。
  
-- 由于style的优先级要高于class，如果class设置的样式里面，包含之前style设置的样式，还是以style中的样式为优先，如果让class设置的样式值生效，可以清除style中相同的样式属性。
+- 由于style的优先级要高于class，如果class设置的样式里面，包含之前style设置的样式，还是以style中的样式为优先。
 
 
 示例： 

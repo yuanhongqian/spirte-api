@@ -29,7 +29,8 @@ line组件用于绘制直线，支持颜色，方向（横/竖），线型（实
 
 **公共样式**  
 
-[参见公共样式章节](https://gitdocument.exmobi.cn/sprite-api/ggys.html)，包括：  
+[参见公共样式章节](https://gitdocument.exmobi.cn/sprite-api/ggys.html)，包括：   
+
 > 定位
 > 
 > 外边距
