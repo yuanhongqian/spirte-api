@@ -827,6 +827,8 @@ isShow：是否显示定位图层,bool型,必选项,
 
 <code>添加定位点</code>
 
+该方法配合setShowUserLocation一起用，注意setShowUserLocation必须在该方法之前设置true。
+
 参数：
 
 jsonData：需添加定位点数据,Json对象,定义如下：
@@ -842,6 +844,8 @@ jsonData：需添加定位点数据,Json对象,定义如下：
 
 <span id="ff_9">**setLocationConfig(jsonData:Object): void**</span>
 
+该方法配合setShowUserLocation和setLocationData一起使用，该方法必须在setLocationData之前先设置好。
+
 <code>设置定位点配置参数</code>
 
 参数：
@@ -852,7 +856,8 @@ jsonData：定位点参数配置,Json对象,定义如下：
 > 
 > accuracyCircleStrokeColor：精度圈边框颜色,字符串类型,支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb）,（#aarrggbb）可选项
 > 
-> icon：定位点图标路径,字符串类型,可选项,本地图片：res:前缀,file:前缀,注：仅Android支持
+> icon：定位点图标路径,字符串类型,可选项,本地图片：res:前缀,file:前缀,注：仅Android支持  
+> 
 > enableDirection：是否允许显示方向信息,bool型,可选项
 > 
 > locationMode：定位图层显示方式,字符串枚举型,[normal,following,compass]
