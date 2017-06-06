@@ -584,9 +584,9 @@ param对象为Json对象,定义如下：
 > 
 > **其他**
 > 
-> [setCenter(jsonData:Object): boolean  设置地图中心点位置](#ff_29) 
+> [setMapCenter(jsonData:Object): boolean  设置地图中心点位置](#ff_29) 
 > 
-> [getCenter(): Object  获取地图中心点位置](#ff_30)
+> [getMapCenter(): Object  获取地图中心点位置](#ff_30)
 > 
 > [getBounds(): Object  返回地图可视区域,以地理坐标表示 ](#ff_31)
 > 

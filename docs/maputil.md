@@ -30,8 +30,7 @@ var maputil = require("MapUtil");
 > [geocode(jsonData:Object,callBackFun:Function): void    根据地址查询百度地图坐标系经纬度 ](#ff_2)
 > 
 > [reverseGeocode (jsonData:Object,callBackFun:Function): void  根据经纬度获取地址详细信息](#ff_3)
-
->
+> 
 >**Poi搜索**
 > 
 > [searchInCity(jsonData:Object,callFunction:Function): void  百度地图市内搜索](#ff_4)
