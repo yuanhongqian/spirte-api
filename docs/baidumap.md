@@ -838,6 +838,8 @@ jsonData：需添加定位点数据,Json对象,定义如下：
 > longitude：经度,数字类型,bd09ll百度地图坐标系,必选项
 > 
 > accuracy：精度信息,数字,必选项,单位：米
+>
+>direction：方向0-360； 
 
 返回值：无
 
