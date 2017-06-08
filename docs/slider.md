@@ -146,7 +146,7 @@ param：当前被选中的页面下标索引，数字类型
 
 **注：**    
 
-- 该事件在页面animator完成的时候进行监听，如果slider控件是动态加载的，该事件会在执行sliderdom.refresh()后自动监听一次。
+- 该事件在页面animator完成的时候进行监听，如果slider控件的pageSelected方法在animaotor之后才开始监听，如果想让其自动监听一次，可以执行sliderdom.refresh()后自动监听一次。
 
 
 **pageScrollStateChanged**  
