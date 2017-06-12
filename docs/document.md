@@ -161,7 +161,7 @@ domObj：当前js运行环境对象，可选参数，component模板中使用，
 
 var popxmlstr = '<box id="box_1" ><text>123</text></box>';
 //创建一个box
-var popmenu= document.createElementByXml(popxmlstr:string): Object;
+var popmenu= document.createElementByXml(popxmlstr) ;
 popbgid.appendChild(popmenuobj);  
 document.refresh();
 ```
