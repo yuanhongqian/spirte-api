@@ -1321,10 +1321,11 @@ beforeDomObj：  在其之前插入新节点的子节点，必选项；
 
 示例：
 
-```javascript  
+```javascript 
+var root = document.getElement("root");  
 var box = document.getElement("box_id");  
 var box1 = document.getElement("box1_id");  
-box.insertBefore(box1);  
+root.insertBefore(box1,box); 
 ```   
 
 
