@@ -347,7 +347,7 @@ else
 返回值：无  
 
 
-<span id="ff_4">**isFrameAnimation: bool**</span>  
+<span id="ff_4">**isFrameAnimation(): boolean**</span>  
 
 <code>是否正在播放图片帧动画</code>    
 
