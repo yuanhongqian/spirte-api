@@ -34,7 +34,8 @@ var window = require("Window");
 > [setStatusBarMode(mode:string): void   设置窗口状态栏模式](#ff_7)  
 > 
 >[ hideSip(): void   隐藏系统输入法  ](#ff_8)
-
+>
+>[isTop(): boolean 当前窗口是否为顶层窗口](#ff9)
 
 
 
@@ -365,7 +366,20 @@ mode：状态栏前景模式，字符串枚举型号，[default,light],必选项
 注：仅iOS支持
 
 
-<span id="ff_8">**hideSip(): void**</span>  
+<span id="ff_8">**isTop(): boolean**</span>  
+
+<code>隐藏系统输入法</code>  
+
+参数：无   
+
+返回值：当前窗口是否为顶层窗口,bool类型,
+
+> true：顶层窗口；
+> 
+> false：非顶层窗口
+
+
+<span id="ff_9">**hideSip(): void**</span>  
 
 <code>隐藏系统输入法</code>  
 
