@@ -295,6 +295,8 @@ list.on("itemClick", function (e, position, sectionPostion) {
 
 [getCaptureTouchEvent(): boolean   获取滚动容器是否拦截子组件touch事件](#ff_17) 
 
+[getAdapter(): ListAdapter  获取ListAdapter对象](#ff_18) 
+
 
 
 <span id="ff_1"><code>**公共方法**</code></span> 
@@ -575,6 +577,12 @@ caputueTouchEvent：滚动容器是否拦截子组件touch事件，bool型：
 > true：拦截子组件touch事件
 > 
 > false：不拦截子组件touch事件
+
+<span id="ff_18">**getAdapter(): ListAdapter **</span> 
+
+<code>获取ListAdapter对象</code>  
+
+返回值：ListAdapter对象
 
 
 <h2 id="cid_5">示例</h2>  

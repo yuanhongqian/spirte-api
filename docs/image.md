@@ -216,7 +216,7 @@ param对象为Json对象，定义如下：
 > 
 > [stopFrameAnimation(): void 停止播放图片帧动画](#ff_3)
 > 
-> [stopFrameAnimation(): void  是否正在播放图片帧动画](#ff_4)
+> [isFrameAnimation void  是否正在播放图片帧动画](#ff_4)
 
 <span id="ff_0"><code>**公共方法**</code></span>  
 
@@ -347,7 +347,7 @@ else
 返回值：无  
 
 
-<span id="ff_4">**stopFrameAnimation(): void**</span>  
+<span id="ff_4">**isFrameAnimation: bool**</span>  
 
 <code>是否正在播放图片帧动画</code>    
 
