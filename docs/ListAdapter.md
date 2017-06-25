@@ -165,6 +165,8 @@ jsonData：刷新参数，json格式，定义如下：
 > index：插入item数据索引（0开始计数），数字类型，必选项；
 > 
 > count：插入item个数，数字类型，可选项，默认为1；
+>
+>animator：是否启用动画，bool型，可选项，默认false，true：启用动画；false：不启用动画 
 
 返回值：无
 
@@ -195,6 +197,7 @@ jsonData：刷新参数，json格式，定义如下：
 <code>移除列表数据后通知list容器局部刷新</code>   
 
 参数：
+
 jsonData：刷新参数，json格式，定义如下：  
 
 > sectionIndex：需刷新 item对应的section索引，数字类型，普通列表设置为0，必选项；
@@ -202,6 +205,9 @@ jsonData：刷新参数，json格式，定义如下：
 > index：移除item数据索引（0开始计数），数字类型，必选项；
 > 
 > count：移除item个数，数字类型，可选项，默认为1；  
+>
+>animator：是否启用动画，bool型，可选项，默认false，true：启用动画；false：不启用动画 
+
 
 返回值：无
 

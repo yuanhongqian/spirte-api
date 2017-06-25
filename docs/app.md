@@ -24,6 +24,10 @@ var app = require("App");
 > [background(): void  切换程序至后台](#ff_3)
 > 
 > [reload(): void  重启程序](#ff_4)
+> 
+>  [getVersion(): string  获取应用版本信息](#ff_5)
+> 
+>  [getSdkVersion():string  获取SDK版本信息 ](#ff_6)
 
 
 
@@ -87,7 +91,29 @@ title.on("rtextClick", function (e) {
 
 参数：无  
 
-返回值：无  
+返回值：无 
+
+
+<span id="ff_5">**getVersion(): string**</span>  
+
+<code>获取应用版本信息</code> 
+
+参数：无
+
+返回值：应用版本信息,字符串类型
+
+注： 这里获取的打包后的应用版本信息，不是入口文件app.json里面定义的版本（应用资源版本）。
+
+
+<span id="ff_5">**getSdkVersion():string**</span>  
+
+<code>获取SDK版本信息</code> 
+
+参数：无 
+
+返回值：SDK版本信息,字符串类型
+
+ 
 
 
 <h2 id="cid_2">事件</h2> 
