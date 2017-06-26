@@ -39,7 +39,7 @@ var ui = require("UI");
 >
 >[ selectImages(jsonData:Object,callBackFun:Function): void  选择设备中多张图片  ](#ff_10)
 > 
-> [void openPicker (jsonData:Object,callFunction:Function):void    启动群组联动选择](#ff_11)
+> [ openPicker (jsonData:Object,callFunction:Function):void    启动群组联动选择](#ff_11)
 
 <span id="ff_0">**alert(jsonData:Object,callFunction:Function): void**</span>  
 
@@ -298,7 +298,7 @@ callBackFun: 结果回调函数，必选项，函数具有json类型入参，入
 > imagePaths：已选择所有图片全路径，字符串数组类型，若用户取消选择则返回空数组
 
 
-<span id="ff_10">**void openPicker (jsonData:Object,callFunction:Function):void **</span>  
+<span id="ff_10">**openPicker (jsonData:Object,callFunction:Function):void **</span>  
 
 <code>启动群组联动选择</code>  
 
