@@ -42,6 +42,12 @@ var contact = require("contact");
 > 
 > [updateGroup(jsonData:Object,callBackFun:Function): void 更新群组至通讯录 ](#ff_12)
 
+> [selectSystemContact(callbackFun:Function): void    启动系统通讯录界面选择联系人信息,点击联系人列表返回](#ff_13)
+> 
+> [selectSystemContactProperty(callbackFun:Function): void   启动系统通讯录界面选择联系人信息,点击联系人详情属性列表项返回](#ff_14)  
+
+
+
 
 
 
@@ -579,3 +585,51 @@ callBackFun：操作回调函数，函数具有json类型入参，入参定义�
 > - -1：更新群组失败；
 
 返回值：无
+
+
+<span id="ff_13">**selectSystemContact(callbackFun:Function): void**</span>  
+
+<code>启动系统通讯录界面选择联系人信息,点击联系人列表返回</code>
+
+参数： 
+
+callFunction：选择回调函数,函数具有json类型入参,入参定义如下：
+
+> code：回应状态码,数字[0,-1]。0：成功选择；-1：取消选择
+> 
+> data：选择的联系人信息，Json对象,定义如下：
+> 
+> -  id：用户标识,字符串类型
+> 
+> -  groupId：用户所属群组标识,字符串类型；
+> 
+> -  name：用户姓名
+> 
+> - mobile：手机号码
+
+返回值：无
+
+
+
+<span id="ff_14">**selectSystemContactProperty(callbackFun:Function): void**</span>  
+
+<code>启动系统通讯录界面选择联系人信息，点击联系人详情属性列表项返回</code> 
+
+参数：
+callFunction：选择回调函数,函数具有json类型入参,入参定义如下：
+
+> code：回应状态码,数字[0,-1]。0：成功选择；-1：取消选择
+> 
+> data：选择的联系人属性，Json对象,定义如下：
+> 
+> -     id：用户标识,字符串类型
+> 
+> -     groupId：用户所属群组标识,字符串类型
+> 
+> -     name：用户姓名
+> 
+> -  data：选中属性项，json格式，支持key包括[phoneNumbers,emailAddresses,postalAddresses,birthdays]
+
+返回值：无 
+
+注：仅iOS支持

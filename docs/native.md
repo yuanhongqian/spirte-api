@@ -29,9 +29,11 @@ var native = require("Native");
 > 
 > [installApk(apkPath:string,callFunction:Function): void   安装指定路径apk安装包  ](#ff_4)
 > 
->[ uninstallApk(packageName:string,callFunction:Function): void   卸载指定应用  ](#ff_5)
- 
-
+>[ uninstallApk(packageName:string,callFunction:Function): void   卸载指定应用  ](#ff_5)  
+>
+> [shareText(jsonData:Object): void  调用系统分享文本](#ff_6)
+>
+> [shareImage(jsonData:Object): void   调用系统分享图片](#ff_7)
 
 
 <span id="ff_0">**openApp(jsonData:Object,callFunction:Function): void**</span>  
@@ -178,3 +180,38 @@ callFunction：安装回调函数，入参为Json对象，定义如下：
 > - -1：卸载失败；  
 
 **注：** 仅Android支持
+
+<span id="ff_6">**shareText(jsonData:Object): void**</span>  
+
+<code>调用系统分享文本</code>
+
+参数：  
+
+jsonData：分享文本，Json对象,定义如下：  
+
+> text：分享文本内容，字符串类型，必选项；  
+> 
+> title：分享界面标题，字符串类型，可选项，注：仅Android支持
+
+返回值：无
+
+
+
+<span id="ff_7">**shareImage(jsonData:Object): void**</span>  
+
+<code>调用系统分享图片</code>   
+
+参数：  
+
+jsonData：分享图片，Json对象,定义如下：  
+
+> imgPath：需分享图片，只支持本地图片,必选项,本地图片路径,支持res: 及 file: 字符串；  
+> 
+> title：分享界面标题，字符串类型，可选项，注：仅Android支持
+
+返回值：无
+
+
+
+
+

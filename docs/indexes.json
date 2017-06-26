@@ -284,6 +284,10 @@
 				{
 					"subject":"RlyIm 容联云工具类",
 					"mdlink":"rlyIm"
+				},
+				{
+					"subject":"JPush 极光Push推送类",
+					"mdlink":"jpush"
 				}
 				
 			 ]
