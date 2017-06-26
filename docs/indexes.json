@@ -288,6 +288,14 @@
 				{
 					"subject":"JPush 极光Push推送类",
 					"mdlink":"jpush"
+				},
+				{
+					"subject":"Pattern 九宫手势密码组件",
+					"mdlink":"pattern"
+				},
+				{
+					"subject":"Share 一键分享功能组件",
+					"mdlink":"share" 
 				}
 				
 			 ]
