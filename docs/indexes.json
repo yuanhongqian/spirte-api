@@ -1,6 +1,15 @@
 {
 "contains": [
 		{
+			"group": "sprite产品版本迭代",
+			"contains": [
+				{
+					"subject": "sprite产品版本迭代",
+					"mdlink": "spritedd"
+				}
+			 ]
+        },
+		{
 			"group": "SpriteUI公共相关",
 			"contains": [
 				{
