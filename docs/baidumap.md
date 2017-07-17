@@ -612,7 +612,7 @@ param对象为Json对象,定义如下：
 > 
 > **标注点**
 > 
-> [addMark(jsonData:Object,domObj:IElement): string   添加单个Mark标注点](#ff_1)
+> [addMark(jsonData:Object,domObj:IElement):Object   添加单个Mark标注点](#ff_1)
 > 
 > [removeMark(jsonData:Object): boolean  移除单个Mark标注点  ](#ff_2)
 > 
@@ -627,12 +627,14 @@ param对象为Json对象,定义如下：
 > [showMarkPop(jsonData:Object):void   弹出mark点指定的pop窗口 ](#ff_42)
 >
 > [hideMarkPop(jsonData:Object):void   隐藏mark点弹出的pop窗口](#ff_43)
+> 
+>[marksZoomToSpan(jarrayData:Array&lt;Object&gt;,animator:boolean):void    指定mark点集合缩放至屏幕可见区域](#ff_tospan)
 >
 > **聚合标注点**  
 > 
 > [setClusterConfig(jsonData:Object): void  设置聚合点参数配置](#ff_33)
 >
-> [addClusterMark(jsonData:Object,domObj:IElement): string   添加单个聚合Mark标注点](#ff_34) 
+> [addClusterMark(jsonData:Object,domObj:IElement): Object   添加单个聚合Mark标注点](#ff_34) 
 >
 > [removeClusterMark(jsonData:Object): boolean  移除单个聚合Mark标注点](#ff_35)  
 >
@@ -851,7 +853,9 @@ param对象为Json对象,定义如下：
 domObj：需要显示的UI组件dom对象，IElement类型，可选项；
 
 
-返回值：标注点唯一id值,字符串类型
+返回值： json类型，json格式如下 
+
+> id: 标注点唯一id值,字符串类型
 
 
 <span id="ff_2">**removeMark(jsonData:Object): boolean**</span>
@@ -1030,6 +1034,22 @@ jsonData：隐藏mark点pop窗口入参，json格式，定义如下：
 返回值：无
 
 
+<span id="ff_tospan">**marksZoomToSpan(jarrayData:Array&lt;Object&gt;,animator:boolean):void **</span>
+
+<code> 指定mark点集合缩放至屏幕可见区域</code>
+
+参数：
+
+jarrayData：标准点集合，数组类型，数组成员json对象，定义如下：
+
+> id: 标准点id
+
+animator：是否使用动画，boolean型，true:使用，false:不使用
+
+
+
+
+
 
 <span id="ff_33">**setClusterConfig(jsonData:Object): void **</span>
 
@@ -1097,7 +1117,9 @@ jsonData：需添加聚合标注点数据,Json对象,定义如下：
 
 domObj：需要显示的UI组件dom对象，IElement类型，可选项；
 
-返回值：标注点唯一id值,字符串类型
+返回值： json类型，json格式如下 
+
+> id: 聚合标注点唯一id值,字符串类型
 
 
 <span id="ff_35">**removeClusterMark(jsonData:Object): boolean **</span>

@@ -4,11 +4,8 @@
 
 XmlElement对象用于操作xml对象，注意该对象不能通过构造函数生成，必须通过XmlDocument类的createElementByString()或createElementByFile()方法才能产生。
 
-使用时需要在js中引入 ：
+在js中不需要require。
 
-```javascript
-var xmlelement = require("XmlElement"); 
-```
 
 **注：** 该组件为外置功能组件，打包时候需要选择。
 
