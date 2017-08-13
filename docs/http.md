@@ -227,7 +227,9 @@ option：需要设置请求参数，Json对象，必选参数，定义如下：
 > 
 > **data**：需要传递数据，字符串类型，可选项，默认空串。对于GET/DELETE类型请求，实际发送为url+data；对于POST/PUT类型请求，data为需要发送数据  
 > 
-> **path**：下载文件保存到本地路径，字符串类型，res：前缀方式，必选项
+> **path**：下载文件保存到本地目录，字符串类型，res：前缀方式，必选项
+>
+> **fileName**： 下载文件指定的文件名包括后缀，字符串类型。
 > 
 > **requestHeader**：自定义请求头。Json类型，可选项，默认空，注意不支持设置cookie头
 > 
@@ -281,6 +283,7 @@ var savePath = "res:downloadTemp/file/";
 
 option.url = base_https;
 option.data = data;
+option.fileName = "app.zip";
 option.isBlock = false;
 option.timeout = 10;
 option.method = "GET";

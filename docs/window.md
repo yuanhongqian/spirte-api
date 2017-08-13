@@ -400,6 +400,8 @@ mode：状态栏前景模式，字符串枚举型号，[default,light],必选项
 >  
 > [getOn(messageName:string): Array&lt;Function&gt;  获取已绑定的事件的触发函数](https://gitdocument.exmobi.cn/sprite-api/ggff.html#jjxg_4)   
 
+ 
+
 本节目录：
 
 [loaded  页面加载完成后触发 ](#sj_1)
@@ -413,6 +415,10 @@ mode：状态栏前景模式，字符串枚举型号，[default,light],必选项
 [destroy  页面被销毁时触发](#sj_5)
 
 [result  接收上层页面关闭回传数据](#sj_6)
+
+[keyboardwillhide  监听键盘隐藏时触发 ](#sj_7)
+
+[keyboardwillshow 监听键盘抬起时触发](#sj_8)
 
 <span id="sj_1">**loaded**</span>  
 
@@ -534,3 +540,42 @@ event事件对象包括：
 > timestamp：事件触发的时间戳,单位毫秒，数字类型 
 
 param： 可为数字类型/字符串类型/数组类型/JSON类型格式；
+
+
+<span id="sj_7">**keyboardwillhide**</span>  
+
+<code>监听键盘隐藏时触发</code>   
+
+event事件对象包括： 
+
+> type：事件类型，字符串类型，固定值：keyboardwillhide；
+> 
+> target：触发事件的目标组件，window类；
+> 
+> timestamp：事件触发的时间戳,单位毫秒，数字类型 
+
+param： JSON类型格式；
+
+> height：键盘抬起高度
+> 
+> width：键盘抬起宽度
+
+
+<span id="sj_8">**keyboardwillshow**</span>  
+
+<code>监听键盘抬起时触发</code>   
+
+event事件对象包括： 
+
+> type：事件类型，字符串类型，固定值：keyboardwillshow；
+> 
+> target：触发事件的目标组件，window类；
+> 
+> timestamp：事件触发的时间戳,单位毫秒，数字类型 
+
+param： JSON类型格式；
+
+> height：键盘抬起高度
+> 
+> width：键盘抬起宽度
+
