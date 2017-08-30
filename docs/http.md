@@ -85,7 +85,7 @@ option.method = "POST";
 option.data = "username=lihua&password=123456";
 option.reqCharset = "utf-8";
 option.isBlock = false;
-Http.ajax(option, function (json) {
+http.ajax(option, function (json) {
    if(json.status == 200){
 	//成功
 	console.log(json.data);
@@ -197,7 +197,7 @@ option.isBlock = false;
 option.timeout = 10;
 option.method = "POST";
 
-httpId = Http.formSubmit(option, function(responseData){
+httpId = http.formSubmit(option, function(responseData){
 	if(responseData.status >= 200 && responseData.status <= 299){
                 text = "网络请求成功";
             }else if(responseData.status == -1){
@@ -289,7 +289,7 @@ option.timeout = 10;
 option.method = "GET";
 option.path = savePath;
 
-httpId = Http.download(option, function(responseData){
+httpId = httpdownload(option, function(responseData){
 	if(responseData.status >= 200 && responseData.status <= 299){
                 text = "网络请求成功";
                 text += "文件路径:" + responseData.path;
