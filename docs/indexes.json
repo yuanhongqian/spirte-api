@@ -108,7 +108,54 @@
 				{
 					"subject": "baidumap 百度地图组件",
 					"mdlink": "baidumap"
+				},
+				{
+					"subject": "rlyimlist 最近联系人列表信息",
+					"mdlink": "rlyimlist"
+				},
+				{
+					"subject": "rlyimnotify 群组消息通知",
+					"mdlink": "rlyimnotify"
+				},
+				{
+					"subject": "rlyimchat 单人聊天界面",
+					"mdlink": "rlyimchat"
+				},
+				{
+					"subject": "rlyimgroupchat 群组聊天界面",
+					"mdlink": "rlyimgroupchat"
+				},
+				{
+					"subject": "piechart BI饼状图",
+					"mdlink": "piechart"
+				},
+				{
+					"subject": "barchart BI柱状图",
+					"mdlink": "barchart"
+				},
+				{
+					"subject": "linechart BI线状图",
+					"mdlink": "linechart"
+				},
+				{
+					"subject": "combinedchart BI复合图",
+					"mdlink": "combinedchart"
+				},
+				{
+					"subject": "candlechart BI蜡状图",
+					"mdlink": "combinedchart"
+				},
+				{
+					"subject": "safetextfield 安全键盘",
+					"mdlink": "safetextfield"
+				},
+				{
+					"subject": "imageshow  图片预览组件",
+					"mdlink": "imageshow"
 				}
+				
+				
+				
 			 ]
         },
 		{
@@ -305,6 +352,38 @@
 				{
 					"subject":"Share 一键分享功能组件",
 					"mdlink":"share" 
+				},
+				{
+					"subject":"Mob  短信",
+					"mdlink":"mob" 
+				},
+				{
+					"subject":"TouchId  指纹识别",
+					"mdlink":"touchid" 
+				},
+				{
+					"subject":"LocalNotification  本地通知",
+					"mdlink":"localmotification" 
+				},
+				{
+					"subject":"Agenda   系统日程",
+					"mdlink":"agenda" 
+				},
+				{
+					"subject":"GaodeLocation  高德定位组件",
+					"mdlink":"gaodelocation" 
+				},
+				{
+					"subject":"WebSocket  组件",
+					"mdlink":"websocket"
+				},
+				{
+					"subject":"Nfc  组件",
+					"mdlink":"nfc"
+				},
+				{
+					"subject":"FhIm  烽火IM功能组件",
+					"mdlink":"fhim"
 				}
 				
 			 ]

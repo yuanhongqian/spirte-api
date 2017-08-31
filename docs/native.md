@@ -34,6 +34,8 @@ var native = require("Native");
 > [shareText(jsonData:Object): void  调用系统分享文本](#ff_6)
 >
 > [shareImage(jsonData:Object): void   调用系统分享图片](#ff_7)
+> 
+> [openSystemSetting(jsonData:Object): void   打开系统设置相关界面，如：蓝牙设置、定位设置、WiFi设置等](#ff_8)
 
 
 <span id="ff_0">**openApp(jsonData:Object,callFunction:Function): void**</span>  
@@ -210,6 +212,46 @@ jsonData：分享图片，Json对象,定义如下：
 > title：分享界面标题，字符串类型，可选项，注：仅Android支持
 
 返回值：无
+
+<span id="ff_7">**openSystemSetting(jsonData:Object): void**</span>  
+
+<code>打开系统设置相关界面，如：蓝牙设置、定位设置、WiFi设置等</code>   
+
+参数： 
+
+jsonData：传递参数,Json对象,定义如下： 
+
+> type：打开系统设置相关页面传递参数，字符串枚举型，【settings，wifi，mobile，bluetooth，general，notifications，location，about，vpn，touchid，development，nfc】
+> 
+> - settings：设置主界面
+> 
+> - wifi：设置-WIFI
+>  
+> - mobile：设置-蜂窝移动网络
+>  
+> - bluetooth：设置-蓝牙
+>  
+> - general：设置-通用
+>  
+> - notifications:设置-通知
+>  
+> - location：设置-隐私-定位服务
+>  
+> - about：设置-通用-关于本机
+>  
+> - vpn：设置-通用-VPN
+>  
+> - touchid：设置-TouchId与密码
+> 
+> - development：开发人员选项设置，仅Android支持
+> 
+> - nfc：NFC设置界面，仅Android支持 
+
+
+返回值：无
+
+
+
 
 
 

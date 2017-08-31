@@ -86,7 +86,9 @@ var rlyIm = require("RlyIm");
 
 <code>启动容联云IM初始化并进行用户登录</code>  
 
-启动容联云IM初始化并进行用户登录，处理结果进入回调中返回 
+启动容联云IM初始化并进行用户登录，处理结果进入回调中返回
+
+注： 容联云后面所有的功能都必须在成功登录后才能使用。
 
 参数：  
 
@@ -116,6 +118,12 @@ loginDataJson：登录用户传递数据，json格式，定义如下：
 > appToken：应用appToken，必选项；
 > 
 > userId：第三方应用系统账号，调用登录接口后容联云服务器会自注册，后续启动聊天时改值可视为voipId，需保证唯一，必选项； 
+> 
+>** 注：**  
+>
+> - 容联云第三方账号里面不能以g开头，里面也不能含有@符号。
+> 
+> -  sprite中默认是强登录模式，如果在另外一台设备登录，会挤掉之前设备登录的用户，不过和网页版用户登录不冲突。
 
 
 onLoginFunction：登录回调函数，该回调函数具有一个入参，类型为数字： 
@@ -155,6 +163,7 @@ rereshFunction：获取Im关联数据回调函数，该回调函数具有一个�
 参数：无 
 
 返回值：无
+
 
 <span id="ff_3">**setSettingInfo(settingInfoJson: Object): void**</span>  
 
@@ -267,6 +276,8 @@ callFunction：创建群组回调函数，该函数具有json类型入参，入�
 >  - 5：高级VIP组，上限2000人
 
 返回值：无  
+
+**注：** 容联云基础版只能创建临时组100人，并且一次只能邀请5个人建组。
 
 
 <span id="ff_5">**getGroupMembes(dataJson: Object, callFunction: Function): void**</span>  
