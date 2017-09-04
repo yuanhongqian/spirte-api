@@ -43,6 +43,14 @@ list支持普通模式及Section分组模式，可根据实际使用场景使用
 list处于垂直滚动模式时，可以包裹refresh容器用于实现下拉刷新及上拉刷新效果，[详见refresh容器章节](https://gitdocument.exmobi.cn/sprite-api/refresh.html)。
 
 
+**section** 
+
+用于放置列表section模板布局文件,采用flexbox模型布局,支持嵌套任意类型的UI组件或容器,使用和box容器一致。
+
+某些复杂列表页面需要可能具有多个section模板,支持放置多个section容器用于区分,此时section需要设置不同id属性用于区分。
+
+
+
 
 <h2 id="cid_1">属性</h2> 
 
@@ -71,6 +79,17 @@ list处于垂直滚动模式时，可以包裹refresh容器用于实现下拉刷
 
 注：仅iOS支持
 
+**sectionCollapse** 
+
+<code>是否允许section区域具有折叠/展开的功能</code>
+
+取值,[true,false]
+
+true：允许section区域折叠/展开；
+
+false：不允许section区域进行折叠/展开（默认）；
+
+
 
 <h2 id="cid_2">样式</h2>
 
@@ -95,43 +114,6 @@ list处于垂直滚动模式时，可以包裹refresh容器用于实现下拉刷
 > flexbox布局：align-self，flex
 
 
-**section-background-color**  
-
-<code>组背景色</code>
-
-默认值：#f0f0f0
-
-**section-color**  
-
-<code>组文字颜色</code>
-
-默认值： #00000
-
-
-**section-font-size**  
-
-<code>组文字大小</code> 
-
-取值数字，单位dp，默认值：16  
-
-
-**section-font-weight**  
-
-<code>组文字粗细</code>  
-
-取值 [normal,bold]  
-
-> normal：正常字体（默认）；
-> 
-> bold：粗体；
-
-
-**section-font-margin**  
-
-<code>组文字margin</code>  
-
-按照：上 右 下 左 ，默认：8 16 8 16，示例：section-font-margin:5 5 5 5 或 section-font-margin:5;
-
 
 
 <h2 id="cid_3">事件</h2>
@@ -147,6 +129,8 @@ list处于垂直滚动模式时，可以包裹refresh容器用于实现下拉刷
 >[ scrollStop  滚动结束时触发](#sj_4)
 >
 >[ itemClick  列表项点击时触发](#sj_5)
+> 
+> [sectionStatus  列表section区域折叠/展开时触发](#sj_6)
 
 <span id="sj_1">**scrollToBottom**</span>   
 
@@ -254,6 +238,30 @@ list.on("itemClick", function (e, position, sectionPostion) {
 ```
 
 
+<span id="sj_6">**scrollChange**</span>  
+
+<code>列表section区域折叠/展开时触发</code>  
+
+event事件对象,包括：
+
+> type：事件类型,字符串类型,固定值：sectionCollapse；
+> 
+> target：section区域触发,dom对象；
+> 
+> timestamp：事件触发的时间戳,单位毫秒,数字类型
+
+param对象为Json对象,定义如下：
+
+> sectionIndex：section索引,数字类型
+> 
+> status：section当前状态，字符串枚举型，【collapse，expand】
+> 
+> - collapse：折叠状态
+> 
+> - expand：展开状态
+
+
+
 
 <h2 id="cid_4">js方法</h2> 
 
@@ -296,6 +304,14 @@ list.on("itemClick", function (e, position, sectionPostion) {
 [getCaptureTouchEvent(): boolean   获取滚动容器是否拦截子组件touch事件](#ff_17) 
 
 [getAdapter(): ListAdapter  获取ListAdapter对象](#ff_18) 
+
+[collapseSection(jsonData:Object): void  折叠指定section](#ff_19)
+
+[expandSection(jsonData:Object): void  展开指定section](#ff_20)
+
+[ scrollHeaderToType(jsonData: Object): void  将容器内的header区域滚动到特定位置](#ff_21) 
+
+[scrollFooterToType(jsonData: Object): void;    将容器内的footer区域滚动到特定位置](#ff_22)
 
 
 
@@ -436,8 +452,16 @@ jsonData：滚动参数，Json对象，定义如下：
 > animated：滚动时是否启用动画，
 > 
 > bool型，true：启用动画；false：不启用动画（默认）；
+> 
+> scrollType：滚动位置,字符串枚举型,可选项,[top,bottom]
+> 
+> - top：item区域顶边与容器顶边对齐；（默认）
+> 
+> - bottom：item区域底边与容器底边对齐；
 
 返回值：无
+
+
 
 
 
@@ -466,7 +490,6 @@ jsonData：滚动参数，Json对象，定义如下：
 返回值：滚动容器y轴滚动点坐标，竖向滚动容器使用
 
 
-
 <span id="ff_8">**hideHeader(): void**</span>
 
 <code>隐藏列表顶部区域</code>
@@ -474,7 +497,6 @@ jsonData：滚动参数，Json对象，定义如下：
 参数：无 
 
 返回值：无
-
 
 
 <span id="ff_9">**showHeader(): void**</span>
@@ -583,6 +605,72 @@ caputueTouchEvent：滚动容器是否拦截子组件touch事件，bool型：
 <code>获取ListAdapter对象</code>  
 
 返回值：ListAdapter对象
+
+<span id="ff_19">collapseSection(jsonData:Object): void</span>
+
+<code>折叠指定section</code>
+
+
+参数：
+jsonData：传递参数,Json对象,定义如下：
+> 
+> sectionIndex：section索引,数字类型
+
+返回值：无
+
+<span id="ff_20">expandSection(jsonData:Object): void</span>
+
+<code>展开指定section</code>
+
+参数：
+
+jsonData：传递参数,Json对象,定义如下：
+> 
+> sectionIndex：section索引,数字类型
+
+返回值：无
+
+
+<span id="ff_21">**scrollHeaderToType(jsonData:Object): void**</span>
+
+<code>将容器内的header区域滚动到特定位置</code>
+
+参数：
+
+ jsonData：滚动参数,Json对象,定义如下：
+
+> scrollType：滚动位置,字符串枚举型,必选项,[top,bottom]
+> 
+> - top：header区域顶边与容器顶边对齐；
+> 
+> - bottom：header区域底边与容器底边对齐；
+>
+> animated：滚动时是否启用动画,bool型,可选项,true：启用动画；false：不启用动画（默认）； 
+
+返回值：无
+
+**注：** 当header区域小于容器显示区域时，scrollType设置为bottom调用失效
+
+
+<span id="ff_22">**scrollFooterToType(jsonData:Object): void**</span>
+
+<code>将容器内的footer区域滚动到特定位置</code> 
+
+参数：
+
+jsonData：滚动参数,Json对象,定义如下：
+
+> scrollType：滚动位置,字符串枚举型,必选项,[top,bottom]
+> 
+> - top：footer区域顶边与容器顶边对齐；
+> 
+> - bottom：footer区域底边与容器底边对齐；
+
+animated：滚动时是否启用动画,bool型,可选项,true：启用动画；false：不启用动画（默认）； 
+
+返回值：无  
+
+**注：**  当footer区域小于容器显示区域时，scrollType设置为top调用失效
 
 
 <h2 id="cid_5">示例</h2>  
@@ -730,6 +818,11 @@ caputueTouchEvent：滚动容器是否拦截子组件touch事件，bool型：
             list.on("scrollToBottom", function (e) {
 
 
+            });
+
+	    list.on("sectionStatus", function(e,data) {
+
+                 console.log(data);
             });
             list.on("scrollStart", function (e) {
                 console.log("scrollStart");
@@ -904,6 +997,55 @@ caputueTouchEvent：滚动容器是否拦截子组件touch事件，bool型：
                         });
                     }
                 });
+
+		adapter.on("getSectionView", function(e, sectionindex) {
+                    var title = e.target.getElement("sectionTitle");
+                    var text = "";
+                    text = text + "第" + sectionindex + "个section";
+                    console.log(text);
+                    title.setText(text);
+                    e.target.setAttr("testpos", sectionindex);
+                    if (sectionindex == 1)
+                    {
+                        var image = e.target.getElement("img");
+                        var sectionJson = datas[sectionindex];
+                        var data = sectionJson.cells[0];
+                        image.setAttr("src", data.image);
+
+                    }
+
+                    var funs = e.target.getOn("click");
+                    if (funs.length <= 0) {
+                        e.target.on("click", function(e) {
+                            var text = this.getAttr("testpos");
+                            var pos = parseInt(text);
+
+                            var sectionJson = datas[pos];
+                            if (sectionJson.isExpand)
+                            {
+                                var json = {};
+                                json.sectionIndex = pos;
+                                json.animated = true;
+                                list.collapseSection(json);
+                                sectionJson.isExpand = false;
+                            }
+                            else
+                            {
+                                var json = {};
+                                json.sectionIndex = pos;
+                                json.animated = true;
+                                list.expandSection(json);
+                                sectionJson.isExpand = true;
+                            }
+                        });
+                    }
+                });
+                adapter.on("getSectionCellId", function(e, sectionindex) {
+                    
+                   if (sectionindex == 1)
+                        return "section2";
+                   return "section1";
+                });
                 adapter.on("getCount", function (e, sectionindex) {
                     var sectionJson = datas[sectionindex];
                     return sectionJson.cells.length;
@@ -1052,6 +1194,13 @@ caputueTouchEvent：滚动容器是否拦截子组件touch事件，bool型：
                     <image id="img" src="http://cdn.duitang.com/uploads/item/201205/14/20120514213552_NYXHG.jpeg" style="width:50;height:50;cacheType:memory;fade:true"
                     />
                 </cell>
+ 		<section id="section1" class="section1">
+                    	<text id="sectionTitle" style="color:#d4d1cf;font-size:25">呵呵</text>
+                </section>
+                <section id="section2" class="section2">      
+	                    <text id="sectionTitle" style="color:#d4d1cf;font-size:25">呵呵</text>
+	                    <image id="img" src="http://cdn.duitang.com/uploads/item/201205/14/20120514213552_NYXHG.jpeg" style="width:50;height:50;cacheType:memory;fade:true" />
+                </section>
                 <header style="flex-direction:row;justify-content:flex-start;flex-wrap:nowrap;">
                     <image id="img" src="res:spritetest/image/bg.jpg" style="flex:1;height:200;cacheType:memory;scaleType:cover" />
                 </header>

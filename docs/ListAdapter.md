@@ -24,7 +24,13 @@ ListAdapter为list容器提供高性能的数据处理和访问，ListAdapter本
 >
 >[ getSectionCount  返回section栏总数](#sj_4)
 >
->[getSectionText   返回指定section栏所显示的文字](#sj_5)
+> [getSectionView  section节点需要绘制时触发](#sj_5)
+> 
+> [getSectionCellId   当section节点需要绘制时触发](#sj_6)
+
+
+
+
 
 **注：** 事件中的 返回值 是开发者需要return的返回值。
 
@@ -109,24 +115,42 @@ event事件对象包括：
 
 
 
-<span id="sj_5">**getSectionText**</span>
+<span id="sj_5">**getSectionView**</span>
 
-<code>返回指定section栏所显示的文字 </code>
+<code>当section节点需要绘制时触发</code>
 
+数据同list容器绑定后,当section节点需要绘制时触发,二次开发人员在该函数中设置section所需相关参数给list容器绘制
 
-数据同list容器绑定后，当item节点需要绘制时触发，二次开发人员在该函数中返回指定section栏所显示的文字   
+event事件对象包括：  
 
-event事件对象包括：    
+> type：事件类型,字符串类型,固定值：getSectionView；
+> 
+> target：需要设置的section节点,dom对象；
+> 
+> timestamp：事件触发的时间戳,单位毫秒,数字类型
 
-> type：事件类型，字符串类型，固定值：getCount；
+sectionIndex：section索引,数字类型,普通列表返回0； 
+
+<span id="sj_6">**getSectionCellId**</span>
+
+<code>当section节点需要绘制时触发</code>  
+
+数据同list容器绑定后,当section节点需要绘制时触发,二次开发人员在该函数中返回section对应模板id 
+
+event事件对象包括：  
+
+> type：事件类型,字符串类型,固定值：getSectionCellId；
 > 
 > target：固定返回null；
 > 
-> timestamp：事件触发的时间戳,单位毫秒，数字类型
+> timestamp：事件触发的时间戳,单位毫秒,数字类型
 
-sectionIndex：section栏索引，数字类型
- 
-返回值：指定section栏所显示的文字，普通列表固定返回null；
+sectionIndex：对应的section索引,数字类型,普通列表返回0；
+
+返回值：对应section模板id值,字符类型
+
+**注：** 该回调事件主要用于多section模板展现,二次开发人员需要返回section模板id，若单模板则可不实现回调
+
 
 
 <h2 id="cid_4">js方法</h2> 

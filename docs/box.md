@@ -44,6 +44,41 @@ box容器为用于包裹其他UI组件的基础布局容器，采用flexbox模�
 
 
 
+**shadow-offset-x ** 
+
+<code>阴影X轴方向偏移值</code>
+
+数字类型，默认0 
+
+注：仅iOS支持
+
+**shadow-offset-y **
+
+<code>阴影Y轴方向偏移值</code>
+
+数字类型，默认-3 
+
+注：仅iOS支持
+
+**shadow-opacity **
+
+<code>阴影透明度</code>
+
+数字,取值范围为 [0, 1]。默认值 0 
+
+注：仅iOS支持
+
+**shadow-radius **
+
+<code>阴影模糊半径</code>
+
+数字,默认值3
+
+注：仅iOS支持
+
+
+
+
 <h2 id="cid_2">事件</h2>
 
 本节目录：

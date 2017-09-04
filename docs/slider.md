@@ -99,6 +99,23 @@ slider页布局容器一般用于以下几种典型场景：
 
 **注：** 仅iOS支持
 
+**type**
+
+<code>slider显示模式</code>
+
+slider显示模式，字符串枚举型，可选项【normal，zoom，depth，gallery】 
+
+> norml：全屏展现，默认动画切换（默认）
+> 
+> zoom：全屏展现，缩放动画切换
+> 
+> depth：全屏展现，抽屉动画切换，仅Android支持
+> 
+> gallery：非全屏展现，缩放动画切换
+
+**注：** type仅对direction为horizontal横向滚动生效
+
+
 
 
 <h2 id="cid_2">样式</h2>  
@@ -121,7 +138,22 @@ slider页布局容器一般用于以下几种典型场景：
 > 
 > flexbox布局：align-self，flex
 
+**page-margin**
+	
+<code>相邻page页左右间距</code>
 
+数字类型，默认20
+
+**注：** type为gallery非全屏展现时生效
+
+
+**page-layout-margin	**
+
+<code>主page页距屏幕左/右两侧间距</code>
+
+数字类型，默认控件自身的10%（程序内部计算），自己写需要写dp单位，不支持百分比。
+
+**注：** type为gallery非全屏展现时生效
 
 
 
@@ -205,8 +237,6 @@ param：滑动参数，json类型，定义如下：
 > - 缓慢滑动时，取值范围 [ 0,1]；
 > 
 > - 快速滑动时，取值范围[0, 滑过页面的个数]
-
-
 
 <h2 id="cid_4">js方法</h2>   
 

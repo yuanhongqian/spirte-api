@@ -6,11 +6,24 @@ text文本控件用于显示文本展示，text内部仅支持放置需要显示
 
 <h2 id="cid_0">属性</h2> 
 
-
-
 **公共属性**  
 
 [参见公共属性章节](https://gitdocument.exmobi.cn/sprite-api/ggsx.html)，包括：id、style、class；
+
+
+
+
+**selectable**  
+
+<code>长按是否弹出系统选择菜单</code>  
+
+取值：[true,false]
+
+> true：弹出系统选择菜单；
+> 
+> fasle：不弹出系统选择菜单；（默认）
+
+
 
 <h2 id="cid_1">样式</h2>
 
@@ -61,6 +74,19 @@ text文本控件用于显示文本展示，text内部仅支持放置需要显示
 - 若不设置该属性则视为自动扩充  
 
 - 设置该属性后，会空出最大行数的位置
+
+
+
+**selected-background-color**
+
+<code>文字选中背景色</code>  
+
+文字选中背景色，默认值：#ade1f6 
+
+注：仅iOS支持
+
+
+
 
 <h2 id="cid_2">事件</h2>
 
@@ -146,6 +172,27 @@ text文本控件用于显示文本展示，text内部仅支持放置需要显示
 > [getTag(): string  获取UI组件类型](https://gitdocument.exmobi.cn/sprite-api/ggff.html#ptdom_18)  
 >  
 > [getId(): string  获取UI组件Id标识](https://gitdocument.exmobi.cn/sprite-api/ggff.html#ptdom_19) 
+
+
+**setHtml(html:String):void**
+
+<code>设置需要展示的Html富文本数据</code>
+
+如果想让text内部文字支持html富文本，必须通过该方法设置，直接写死在text标签内部无效。
+
+参数：
+
+html：需要展示的html富文本数据，字符串类型
+
+返回值：无 
+
+**注：**
+- 1：设置富文本样式后，iOS无法精确测量文字区域，因此需要开发者设置宽高，Android则可自适应；
+- 2：Android中text组件文本样式设置（如font-size，color）会传递至html富文本中，但iOS不会传递；
+- 3：Android中font标签仅支持color设置，若需要文字大小建议套用&lt;big&gt;  &lt;small&gt;来实现；
+
+
+
 
 
 <h2 id="cid_4">示例</h2>  

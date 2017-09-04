@@ -28,6 +28,13 @@ var app = require("App");
 >  [getVersion(): string  获取应用版本信息](#ff_5)
 > 
 >  [getSdkVersion():string  获取SDK版本信息 ](#ff_6)
+> 
+>  [getPackageName(): string  获取Android当前原生应用包名 ](#ff_7)
+> 
+>  [getBundleId():string  获取iOS当前原生应用bundleId 参数](#ff_8)
+
+
+
 
 
 
@@ -113,7 +120,26 @@ title.on("rtextClick", function (e) {
 
 返回值：SDK版本信息,字符串类型
 
- 
+
+
+<span id="ff_6">**getPackageName(): string**</span>  
+
+<code>获取Android当前原生应用包名</code> 
+
+参数：无 
+
+返回值：Android原生应用包名,字符串类型
+
+**注：**仅Android支持	
+
+<span id="ff_7">**getBundleId():string**</span>  
+
+<code>获取iOS当前原生应用bundleId</code>  
+
+参数：无 返回值：获取iOS当前原生应用bundleId,字符串类型
+
+**注：** 仅iOS支持	
+
 
 
 <h2 id="cid_2">事件</h2> 
@@ -138,9 +164,11 @@ title.on("rtextClick", function (e) {
 
 [inactivate  监听程序从前台被切换至后台时执行触发](#sj_4)
 
-[orientation  监听设备横竖屏切换时触发](#sj_4) 
+[orientation  监听设备横竖屏切换时触发](#sj_5) 
 
-[launch  应用程序被启动时触发](#sj_5)
+[launch  应用程序被启动时触发](#sj_6)
+
+[trigger  应用程序已启动后被第三方程序调用时触发](#sj_)6
 
 
 <span id="sj_1">**back**</span>  
@@ -290,3 +318,43 @@ param：Json对象，定义如下：
 > 
 > - 本地通知启动：值为Json对象
  
+<span id="sj_7">**trigger**</span>  
+
+<code>应用程序已启动后被第三方程序调用时触发</code>  
+
+该事件用于在程序入口js中配置使用,event事件对象包括：
+
+> type：事件类型,字符串类型,固定值：trigger；
+> 
+> target：触发事件的目标组件,app类；
+> 
+> timestamp：事件触发的时间戳,单位毫秒,数字类型
+
+param：Json对象,定义如下：
+> 
+> data：启动传递参数，Android值为Json对象，iOS值为字符串类型
+
+
+示例： 
+
+```javascript
+
+//应用homeJs配置中启动
+var app = require("App");
+var device = require("Device");
+app.on("trigger",function(e,jsonData){
+	//程序已启动后被其他应用调用启动
+	var os = device.getOs();
+	if(os == "Android"){
+		 //Android接收数据值为Json类型
+	        var data = jsonData.data;
+	        var name = data.name;
+	        var password = data.password;
+	}else if(os == "iOS"){
+		 //iOS接收数据值为字符串类型
+	         var data = jsonData.data; 
+	}
+});
+
+```
+
