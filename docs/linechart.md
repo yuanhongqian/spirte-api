@@ -141,36 +141,48 @@ event事件对象包括：
 > [setConfig(jsonData:object):void 设置折线图参数  ](#ff_2)
 > 
 > [setData(jsonData:object):void 设置折线图数据](#ff_3)  
+
+>[ invalidate():void 刷新折线图  ](#ff_4)
 > 
-> [addXLimitLine (data:object):string	添加X轴限制线 ](#ff_3) 
+> [addXLimitLine (data:object):string	添加X轴限制线 ](#ff_5) 
 > 
-> [removeXLimitLine (id:string):void	移除指定X轴限制线 ](#ff_4) 
+> [removeXLimitLine (id:string):void	移除指定X轴限制线 ](#ff_6) 
 > 
-> [addLeftYLimitLine (data:object):string	添加左侧Y轴限制线 ](#ff_5) 
+> [removeAllXLimitLine ():void  移除所有X轴限制线](#ff_7)
 > 
-> [removeLeftYLimitLine (id:string):void	移除指定左侧Y轴限制线](#ff_6)  
+> [addLeftYLimitLine (data:object):string	添加左侧Y轴限制线 ](#ff_8) 
 > 
-> [removeAllLeftYLimitLine ():void	移除所有左侧Y轴限制线](#ff_7)  
+> [removeLeftYLimitLine (id:string):void	移除指定左侧Y轴限制线](#ff_9)  
 > 
-> [addRightYLimitLine (data:object):string	添加右侧Y轴限制线](#ff_8)  
+> [removeAllLeftYLimitLine ():void	移除所有左侧Y轴限制线](#ff_10)  
 > 
-> [removeRightYLimitLine (id:string):void	移除指定右侧Y轴限制线  ](#ff_9)
+> [addRightYLimitLine (data:object):string	添加右侧Y轴限制线](#ff_11)  
 > 
->[ removeAllRightYLimitLine ():void	移除所有右侧Y轴限制线  ](#ff_10)
+> [removeRightYLimitLine (id:string):void	移除指定右侧Y轴限制线  ](#ff_12)
 > 
->[ invalidate():void 刷新折线图  ](#ff_11)
+>[ removeAllRightYLimitLine ():void	移除所有右侧Y轴限制线  ](#ff_13)
 > 
->[ setDrawValueEnabled(show:boolean):void	设置节点描述是否显示 ](#ff_12) 
+>[ setDrawValueEnabled(show:boolean):void	设置节点描述是否显示 ](#ff_14) 
 > 
->[ setDrawHighlightEnabled(show:boolean):void	设置点击节点是否显示高亮标识线 ](#ff_13) 
+>[ setDrawHighlightEnabled(show:boolean):void	设置点击节点是否显示高亮标识线 ](#ff_15) 
 > 
-> [setDrawFilledEnabled(show:boolean):void	设置是否绘制折线填充区域  ](#ff_14)
+> [setDrawCirclesEnabled(show:boolean):void	设置是否绘制节点圆  ](#ff_16)
 > 
-> [setDrawCirclesEnabled(show:boolean):void	设置是否绘制节点圆  ](#ff_15)
+>[ setPinchZoomEnabled(show:boolean):void	设置是否比例缩放，true：比例放大缩小；false：单轴放大缩小  ](#ff_17)
 > 
->[ setPinchZoomEnabled(show:boolean):void	设置是否比例缩放，true：比例放大缩小；false：单轴放大缩小  ](#ff_16)
+> [setDrawLineMode(mode:string):void	设置折线绘制模式【LINEAR，STEPPED，CUBIC_BEZIER，HORIZONTAL_BEZIER】 ](#ff_18)
 > 
-> [setDrawLineMode(mode:string):void	设置折线绘制模式【LINEAR，STEPPED，CUBIC_BEZIER，HORIZONTAL_BEZIER】 ](#ff_17)
+> [animateX(jsonData:object):void  启动折线图X轴动画](#ff_19)
+> 
+> [animateY(jsonData:object):void   启动折线图Y轴动画](#ff_20)
+> 
+> [animateXY(jsonData:object):void  启动折线图XY轴动画](#ff_21)
+> 
+> [snapshot(jsonData:Object): boolean  图表截屏,图片格式png](#22)
+> 
+> [combineWith(domObj:IElement):void  与 bar / candle / combined / line chart 联动](#ff_23)
+> 
+
 
 
 
@@ -345,7 +357,7 @@ jsonData：参数，Json格式，格式定义如下：
 
 
 
-<span id="ff_3">**setData(jsonData:lineInfo):void **</span>  
+<span id="ff_3">**setData(lineInfo:object):void **</span>  
 
 <code>设置折线图数据</code>   
 
@@ -385,7 +397,7 @@ lineInfo：折线图数据，json类型，定义如下：
 >   -  drawCircleHole：节点处是否绘制中中心圆孔，boolean，true：绘制圆孔，false：不绘制圆孔，默认true  
 >   -  circleHoleRadius：节点绘制圆孔半径，数字，单位dp，默认1  
 >   - circleHoleColor：节点绘制圆孔填充色，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#ffffff    
->   -  //填充色   
+>   - ** //填充色 **  
 >   -  drawFilled：是否绘制折线与X坐标值之间填充色，bool型，true：绘制；false：不绘制，默认false；  
 >   - filledColor：折线与X坐标值之间填充色色值，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#8ceaff  
 >   -  filledAlpha：折线与X坐标值之间填充色透明度，数字类型，取值范围【0-255】，0透明，255不透明，默认85  
@@ -408,155 +420,289 @@ lineInfo：折线图数据，json类型，定义如下：
 
 
 
-<span id="ff_4">**setCenterText(jsonData:object):void  **</span>  
-
-<code>设置饼图中间显示文字</code> 
 
 
 
-<span id="ff_5">**invalidate():void **</span>  
+<span id="ff_4">**invalidate():void **</span>  
 
-<code>刷新饼图数据</code> 
+<code>刷新折线图数据</code> 
 
 参数：无  
 
 返回值：无  
 
-**注：** 数据改变或配置改变后，需调用该方法刷新饼图数据   
+**注：** 数据改变或配置改变后，需调用该方法刷折线图展现  
+ 
+
+<span id="ff_5">**addXLimitLine (data:object):string**</span>  
+
+<code>添加X轴限制线</code>
+
+参数：  
+
+data：添加X轴限制线，json格式定义如下： 
+
+> name：限制线描述，字符串类型  
+> value：限制线X轴值，数字类型  
+> style：限制样式，json格式定义如下：  
+> - lineWidth：线size，数字类型，单位dp，默认1  
+> - lineColor：线颜色，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#ed5b5b  
+> - lineMode：线模式，字符串枚举型，【normal，dashed】，normal：实线，dashed：虚线，默认normal  
+> - labelPosition：描述文字绘制位置，字符串枚举型，【left_top,left_bottom,right_top,right_bottom】，默认right_top  
+> - labelSize：描述文字大小，数字，单位dp，默认10  
+> - labelColor：描述区域文字颜色，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#000000  
+
+返回值：添加限制线标识，字符串类型  
+
+**注：**  需调用invalidate刷新方可生效
 
 
 
-<span id="ff_6">**setDrawHoleEnabled(show:boolean):void	**</span>  
 
-<code>设置饼图中心圆区域是否显示</code>
 
-参数：   
+<span id="ff_6">**removeXLimitLine (id:string):void	**</span>  
 
-> show：中心圆区域是否显示，boolean型，true：显示；false：不显示，必选项  
+<code>移除指定X轴限制线</code>
+	
+参数：  
+
+> id：需要移除X轴限制线标识，字符串类型，必选项  
 
 返回值：无  
 
 **注：** 需调用invalidate刷新方可生效
 
 
-<span id="ff_7">**setDrawNameEnabled(show:boolean):void**</span>  
+	
 
-<code>设置Entry名是否显示</code>  
+<span id="ff_7">**removeAllXLimitLine ():void**</span>  
 
-参数： 
+<code>移除所有X轴限制线</code>
 
-> show：Entry名是否显示，boolean型，true：显示；false：不显示，必选项  
+参数：无  
+
+返回值：无  
+
+**注：** 需调用invalidate刷新方可生效
+
+
+
+
+<span id="ff_8">**addLeftYLimitLine (data:object):string**</span>  
+
+<code>添加左侧Y轴限制线</code>  
+
+
+参数：  
+
+data：添加左侧Y轴限制线，json格式定义如下：  
+
+> name：限制线描述，字符串类型  
+> value：限制线Y轴值，数字类型  
+> style：限制样式，json格式定义如下：  
+> - lineWidth：线size，数字类型，单位dp，默认1  
+> - lineColor：线颜色，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#ed5b5b  
+> - lineMode：线模式，字符串枚举型，【normal，dashed】，normal：实线，dashed：虚线，默认normal  
+> - labelPosition：描述文字绘制位置，字符串枚举型，【left_top,left_bottom,right_top,right_bottom】，默认right_top  
+> - labelSize：描述文字大小，数字，单位dp，默认10  
+> - labelColor：描述区域文字颜色，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#000000  
+
+返回值：添加限制线标识，字符串类型  
+
+**注：** 需调用invalidate刷新方可生效  
+
+
+<span id="ff_9">**removeLeftYLimitLine (id:string):void**</span>  
+
+<code>移除指定左侧Y轴限制线</code>    
+
+
+参数：  
+
+> id：需要移除左侧Y轴限制线标识，字符串类型，必选项
 
 返回值：无  
 
 **注：** 需调用invalidate刷新方可生效  
 
 
-<span id="ff_8">**setDrawValueEnabled(show:boolean):void**</span>  
 
-<code>设置Entry值是否显示</code>
+
+
+<span id="ff_10">**removeAllLeftYLimitLine ():void**</span>  
+
+<code>移除所有左侧Y轴限制线</code>    
+	
+参数：无  
+
+返回值：无  
+
+**注：** 需调用invalidate刷新方可生效  
+
+
+
+<span id="ff_11">** addRightYLimitLine (data:object):string**</span>  
+
+<code>添加右侧Y轴限制线</code>      
+
+参数：  
+
+data：添加右侧Y轴限制线，json格式定义如下：  
+
+> name：限制线描述，字符串类型  
+> value：限制线Y轴值，数字类型  
+> style：限制样式，json格式定义如下：  
+> - lineWidth：线size，数字类型，单位dp，默认1  
+> - lineColor：线颜色，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#ed5b5b  
+> - lineMode：线模式，字符串枚举型，【normal，dashed】，normal：实线，dashed：虚线，默认normal  
+> - labelPosition：描述文字绘制位置，字符串枚举型，【left_top,left_bottom,right_top,right_bottom】，默认right_top  
+> - labelSize：描述文字大小，数字，单位dp，默认10  
+> - labelColor：描述区域文字颜色，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#000000  
+
+返回值：添加限制线标识，字符串类型  
+
+**注：** 需调用invalidate刷新方可生效
+
+
+
+
+<span id="ff_12">**removeRightYLimitLine (id:string):void**</span>  
+
+<code>移除指定右侧Y轴限制线</code>    
+
+
+参数：  
+
+> id：需要移除右侧Y轴限制线标识，字符串类型，必选项
+
+返回值：无  
+
+**注：** 需调用invalidate刷新方可生效
+
+
+
+<span id="ff_13">**removeAllRightYLimitLine ():void**</span>  
+
+<code>移除所有右侧Y轴限制线</code>  
+
+参数：无  
+
+返回值：无  
+
+**注：** 需调用invalidate刷新方可生效  
+
+
+
+<span id="ff_14">**setDrawValueEnabled (show:boolean):void**</span>  
+
+<code>设置节点值是否显示</code>  
+
 	
 参数：  
 
-> show：Entry值是否显示，boolean型，true：显示；false：不显示，必选项  
-> 
-返回值：无  
-
-**注：**  需调用invalidate刷新方可生效  
-
-
-
-<span id="ff_9">**setUsePercentValues(show:boolean):void**</span>  
-
-<code>设置显示时是否使用百分比代替原始数据</code>
-
-参数：  
-
-> show：显示时是否使用百分比代替原始数据，boolean型，true：显示百分比；false：显示原始数据，必选项   
-> 
-返回值：无  
-
-**注：**  需调用invalidate刷新方可生效   
-
-
-<span id="ff_10">**setDrawCenterText(show:boolean):void**</span>  
-
-<code>设置中间文本是否显示</code>  
-
-参数：  
-
-> show：中间文本是否显示，boolean型，true：显示；false：不显示，必选项  
+> show：节点值是否显示，boolean型，true：显示；false：不显示，必选项  
 
 返回值：无  
 
 **注：** 需调用invalidate刷新方可生效  
 
 
-<span id="ff_11">**animateX(jsonData:object):void**</span>  
+<span id="ff_15">**setDrawHighlightEnabled (show:boolean):void**</span>  
 
-<code>启动饼图X轴动画</code>    
+<code>设置点击节点是否显示高亮标识线</code> 
 
 参数：  
 
+> show：点击节点是否显示高亮标识线，boolean型，true：显示；false：不显示，必选项  
+
+返回值：无  
+
+**注：** 需调用invalidate刷新方可生效  
+
+
+<span id="ff_16">**setDrawCirclesEnabled (show:boolean):void**</span>  
+
+<code>是否绘制节点圆</code>   
+
+参数：  
+
+> show：是否绘制节点圆，boolean型，true：绘制；false：不绘制，必选项  
+
+返回值：无  
+
+**注：**  需调用invalidate刷新方可生效
+
+<span id="ff_17">**setPinchZoomEnabled (show:boolean):void**</span>  
+
+<code>设置是否XY轴比例缩放</code>   
+
+参数： 
+
+> show：是否XY轴比例缩放，boolean型，true：比例缩放；false：单轴缩放，必选项  
+
+返回值：无  
+
+**注：** 需调用invalidate刷新方可生效  
+
+<span id="ff_18">**setLineDrawMode (lineDrawMode:string):void**</span>  
+
+<code>设置绘制折线连接模式</code>    
+	
+参数      
+
+lineDrawMode：线绘制连接模式，字符串枚举型，【linear，stepped,cubic_bezier,horizontal_bezier】，linear：线性模式，stepped：步进线模式，cubic_bezier：3D弧度线模式，horizontal_bezier：横向3D弧度线模式  
+
+
+返回值：无
+
+
+<span id="ff_19">**animateX(jsonData:object):void**</span>  
+
+<code>启动折线图X轴动画</code>    
+
+	
+参数： 
+
 jsonData：动画参数，json格式，定义如下：  
 
+>  durationMillis：动画执行时间，数字类型，必选项，单位毫秒  
+>  easingOption：动画执行速率配置，字符枚举型，【ease_in, ease_out, ease_in_out, linear】,可选项，ease_in：动画启动的时候慢；ease_out：动画结束的时候慢；ease_in_out：动画启动时候慢,中间快,结束的时候慢；linear动画速度不变（默认）；  
+
+返回值：无   
+
+
+
+<span id="ff_20">**animateY(jsonData:object):void**</span>  
+
+<code>启动折线图Y轴动画</code>    
+
+参数：  
+
+jsonData：动画参数，json格式，定义如下： 
+
 > durationMillis：动画执行时间，数字类型，必选项，单位毫秒  
-> easingOption：动画执行速率配置，字符枚举型，【ease_in, ease_out, ease_in_out, linear】,可选项，ease_in：动画启动的时候慢；ease_out：动画结束的时候慢；ease_in_out：动画启动时候慢,中间快,结束的时候慢；linear动画速度不变（默认）；  
+> easingOption：动画执行速率配置，字符枚举型，【ease_in, ease_out, ease_in_out, linear】,可选项，ease_in：动画启动的时候慢；ease_out：动画结束的时候慢；ease_in_out：动画启动时候慢,中间快,结束的时候慢；linear动画速度不变（默认）；
 
 返回值：无  
 
 
-<span id="ff_12">**animateY(jsonData:object):void**</span>  
+<span id="ff_21">**animateXY(jsonData:object):void**</span>  
 
-<code>启动饼图Y轴动画</code>    
-
-参数：  
-
-jsonData：动画参数，json格式，定义如下：  
-
-> durationMillis：动画执行时间，数字类型，必选项，单位毫秒   
-> easingOption：动画执行速率配置，字符枚举型，【ease_in, ease_out, ease_in_out, linear】,可选项，ease_in：动画启动的时候慢；ease_out：动画结束的时候慢；ease_in_out：动画启动时候慢,中间快,结束的时候慢；linear动画速度不变（默认）；   
-
-返回值：无    
-
-<span id="ff_13">**animateXY(jsonData:object):void	**</span>  
-
-<code>启动饼图XY轴动画</code>     
-
-
-参数：  
+<code>启动折线图XY轴动画</code>  
+	
+参数： 
 
 jsonData：动画参数，json格式，定义如下：  
 
 > durationMillisX：x轴动画执行时间，数字类型，必选项，单位毫秒  
 > easingOptionX：x轴动画执行速率配置，字符枚举型，【ease_in, ease_out, ease_in_out, linear】,可选项，ease_in：动画启动的时候慢；ease_out：动画结束的时候慢；ease_in_out：动画启动时候慢,中间快,结束的时候慢；linear动画速度不变（默认）；  
 > durationMillisY：y轴动画执行时间，数字类型，必选项，单位毫秒  
-> easingOptionY：y轴动画执行速率配置，字符枚举型，【ease_in, ease_out, ease_in_out, linear】,可选项，ease_in：动画启动的时候慢；ease_out：动画结束的时候慢；ease_in_out：动画启动时候慢,中间快,结束的时候慢；linear动画速度不变（默认）；    
-
-返回值：无   
+> easingOptionY：y轴动画执行速率配置，字符枚举型，【ease_in, ease_out, ease_in_out, linear】,可选项，ease_in：动画启动的时候慢；ease_out：动画结束的时候慢；ease_in_out：动画启动时候慢,中间快,结束的时候慢；linear动画速度不变（默认）；  
 
 
+<span id="ff_22">**snapshot(jsonData:Object): boolean**</span>  
 
-<span id="ff_14">**spin(jsonData:object):void**</span>  
-
-<code>执行饼图旋转动画</code>    
-
-	
-参数：  
-
-jsonData：动画参数，json格式，定义如下：  
-
-> durationMillis：动画执行时间，数字类型，必选项，单位毫秒  
-> fromAngle：旋转启动角度，数字，必选项；  
-> toAngle：旋转结束角度，数字，必选项；  
-> easingOption：动画执行速率配置，字符枚举型，【ease_in, ease_out, ease_in_out, linear】,可选项，ease_in：动画启动的时候慢；ease_out：动画结束的时候慢；ease_in_out：动画启动时候慢,中间快,结束的时候慢；linear动画速度不变（默认）；  
-
-返回值：无  
-
-
-<span id="ff_15">**snapshot(jsonData:Object): boolean**</span>  
-
-<code>图表截屏,图片格式png</code>  
+<code>图表截屏,图片格式png</code> 
 
 参数：  
 
@@ -564,8 +710,19 @@ jsonData：截屏参数,Json对象,定义如下：
 
 > path：截屏保存图片文件路径（包含文件名）,支持res: file:,字符串类型,必选项； 
 
-返回值：截屏是否成功，成功返回true，失败返回false  
+返回值：截屏是否成功，成功返回true，失败返回false   
 
 
+
+<span id="ff_23">**combineWith(domObj:IElement):void	**</span>  
+
+<code>与 bar / candle / combined / line chart 联动</code> 
+
+
+参数：  
+
+domObj：需要联动的 chart 组件dom对象，IElement类型，必选项；  
+
+返回值：无
 
 
