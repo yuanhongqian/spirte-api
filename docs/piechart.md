@@ -111,35 +111,35 @@ event事件对象包括：
 
 本节目录：
 
-> [公共方法](#ff_1)
+> [公共方法](#ff_1)  
 > 
-> [setConfig(jsonData:object):void   设置饼图参数](#ff_2)
+> [setConfig(jsonData:object):void   设置饼图参数](#ff_2)  
 > 
-> [setData(jsonData:object):void   设置饼图数据](#ff_3)
+> [setData(jsonData:object):void   设置饼图数据](#ff_3)  
 > 
-> [setCenterText(jsonData:object):void   设置饼图中间显示文字](#ff_4)
+> [setCenterText(jsonData:object):void   设置饼图中间显示文字](#ff_4)  
 > 
-> [invalidate():void   刷新饼图数据](#ff_5)
+> [invalidate():void   刷新饼图数据](#ff_5)  
 > 
-> [setDrawHoleEnabled(show:boolean):void   设置饼图中心圆区域是否显示](#ff_6)
+> [setDrawHoleEnabled(show:boolean):void   设置饼图中心圆区域是否显示](#ff_6)  
 > 
-> [setDrawNameEnabled(show:boolean):void   设置Entry名是否显示](#ff_7)
+> [setDrawNameEnabled(show:boolean):void   设置Entry名是否显示](#ff_7)  
 > 
-> [setDrawValueEnabled(show:boolean):void   设置Entry值是否显示](#ff_8)
+> [setDrawValueEnabled(show:boolean):void   设置Entry值是否显示](#ff_8)  
 > 
-> [setUsePercentValues(show:boolean):void   设置显示时是否使用百分比代替原始数据](#ff_9)
+> [setUsePercentValues(show:boolean):void   设置显示时是否使用百分比代替原始数据](#ff_9)  
 > 
-> [setDrawCenterText(show:boolean):void   设置中间文本是否显示](#ff_10)
+> [setDrawCenterText(show:boolean):void   设置中间文本是否显示](#ff_10)  
 > 
-> [animateX(jsonData:object):void  启动饼图X轴动画](#ff_11)
+> [animateX(jsonData:object):void  启动饼图X轴动画](#ff_11)  
 > 
-> [animateY(jsonData:object):void   启动饼图Y轴动画](#ff_12)
+> [animateY(jsonData:object):void   启动饼图Y轴动画](#ff_12)  
 > 
-> [animateXY(jsonData:object):void  启动饼图XY轴动画](#ff_13)
+> [animateXY(jsonData:object):void  启动饼图XY轴动画](#ff_13)  
 > 
-> [spin(jsonData:object):void   执行饼图旋转动画](#ff_15)
+> [spin(jsonData:object):void   执行饼图旋转动画](#ff_14)  
 > 
-> [snapshot(jsonData:Object): boolean   图表截屏,图片格式png](#ff_16)
+> [snapshot(jsonData:Object): boolean   图表截屏,图片格式png](#ff_15)  
 
 
 
@@ -282,5 +282,186 @@ jsonData：参数，Json格式，格式定义如下：
 > linePart2Length：扇区外部线长度比例，数字类型，取值范围【0-1】，0最短，1标识最长，默认为0.4  
 
 返回值：无
+
+
+<span id="ff_3">**setData(jsonData:object):void **</span>  
+
+<code>设置饼图数据</code>   
+
+参数：  
+
+jsonData：饼图数据，json格式，定义如下：   
+
+>  setName：数据总描述，字符串类型  
+>  datas：图表实体数据集，数组类型，数据成员为json格式，定义如下：  
+>  - name：Entry实体名称，字符串类型  
+>  - value：Entry实体值，数字类型  
+>  
+> colors：图表实体数据集对应色值，字符串数组类型，数组成员定义色值，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb）  
+
+返回值：无  
+
+**注：**  setData调用前需调用setConfig进行图表参数配置  
+
+
+<span id="ff_4">**setCenterText(jsonData:object):void  **</span>  
+
+<code>设置饼图中间显示文字</code> 
+
+
+
+<span id="ff_5">**invalidate():void **</span>  
+
+<code>刷新饼图数据</code> 
+
+参数：无  
+
+返回值：无  
+
+**注：** 数据改变或配置改变后，需调用该方法刷新饼图数据   
+
+
+
+<span id="ff_6">**setDrawHoleEnabled(show:boolean):void	**</span>  
+
+<code>设置饼图中心圆区域是否显示</code>
+
+参数：   
+
+> show：中心圆区域是否显示，boolean型，true：显示；false：不显示，必选项  
+
+返回值：无  
+
+**注：** 需调用invalidate刷新方可生效
+
+
+<span id="ff_7">**setDrawNameEnabled(show:boolean):void**</span>  
+
+<code>设置Entry名是否显示</code>  
+
+参数： 
+
+> show：Entry名是否显示，boolean型，true：显示；false：不显示，必选项  
+
+返回值：无  
+
+**注：** 需调用invalidate刷新方可生效  
+
+
+<span id="ff_8">**setDrawValueEnabled(show:boolean):void**</span>  
+
+<code>设置Entry值是否显示</code>
+	
+参数：  
+
+> show：Entry值是否显示，boolean型，true：显示；false：不显示，必选项  
+> 
+返回值：无  
+
+**注：**  需调用invalidate刷新方可生效  
+
+
+
+<span id="ff_9">**setUsePercentValues(show:boolean):void**</span>  
+
+<code>设置显示时是否使用百分比代替原始数据</code>
+
+参数：  
+
+> show：显示时是否使用百分比代替原始数据，boolean型，true：显示百分比；false：显示原始数据，必选项   
+> 
+返回值：无  
+
+**注：**  需调用invalidate刷新方可生效   
+
+
+<span id="ff_10">**setDrawCenterText(show:boolean):void**</span>  
+
+<code>设置中间文本是否显示</code>  
+
+参数：  
+
+> show：中间文本是否显示，boolean型，true：显示；false：不显示，必选项  
+
+返回值：无  
+
+**注：** 需调用invalidate刷新方可生效  
+
+
+<span id="ff_11">**animateX(jsonData:object):void**</span>  
+
+<code>启动饼图X轴动画</code>    
+
+参数：  
+
+jsonData：动画参数，json格式，定义如下：  
+
+> durationMillis：动画执行时间，数字类型，必选项，单位毫秒  
+> easingOption：动画执行速率配置，字符枚举型，【ease_in, ease_out, ease_in_out, linear】,可选项，ease_in：动画启动的时候慢；ease_out：动画结束的时候慢；ease_in_out：动画启动时候慢,中间快,结束的时候慢；linear动画速度不变（默认）；  
+
+返回值：无  
+
+
+<span id="ff_12">**animateY(jsonData:object):void**</span>  
+
+<code>启动饼图Y轴动画</code>    
+
+参数：  
+
+jsonData：动画参数，json格式，定义如下：  
+
+> durationMillis：动画执行时间，数字类型，必选项，单位毫秒   
+> easingOption：动画执行速率配置，字符枚举型，【ease_in, ease_out, ease_in_out, linear】,可选项，ease_in：动画启动的时候慢；ease_out：动画结束的时候慢；ease_in_out：动画启动时候慢,中间快,结束的时候慢；linear动画速度不变（默认）；   
+
+返回值：无    
+
+<span id="ff_13">**animateXY(jsonData:object):void	**</span>  
+
+<code>启动饼图XY轴动画</code>     
+
+
+参数：  
+
+jsonData：动画参数，json格式，定义如下：  
+
+> durationMillisX：x轴动画执行时间，数字类型，必选项，单位毫秒  
+> easingOptionX：x轴动画执行速率配置，字符枚举型，【ease_in, ease_out, ease_in_out, linear】,可选项，ease_in：动画启动的时候慢；ease_out：动画结束的时候慢；ease_in_out：动画启动时候慢,中间快,结束的时候慢；linear动画速度不变（默认）；  
+> durationMillisY：y轴动画执行时间，数字类型，必选项，单位毫秒  
+> easingOptionY：y轴动画执行速率配置，字符枚举型，【ease_in, ease_out, ease_in_out, linear】,可选项，ease_in：动画启动的时候慢；ease_out：动画结束的时候慢；ease_in_out：动画启动时候慢,中间快,结束的时候慢；linear动画速度不变（默认）；    
+
+返回值：无   
+
+
+
+<span id="ff_14">**spin(jsonData:object):void**</span>  
+
+<code>执行饼图旋转动画</code>    
+
+	
+参数：  
+
+jsonData：动画参数，json格式，定义如下：  
+
+> durationMillis：动画执行时间，数字类型，必选项，单位毫秒  
+> fromAngle：旋转启动角度，数字，必选项；  
+> toAngle：旋转结束角度，数字，必选项；  
+> easingOption：动画执行速率配置，字符枚举型，【ease_in, ease_out, ease_in_out, linear】,可选项，ease_in：动画启动的时候慢；ease_out：动画结束的时候慢；ease_in_out：动画启动时候慢,中间快,结束的时候慢；linear动画速度不变（默认）；  
+
+返回值：无  
+
+
+<span id="ff_15">**snapshot(jsonData:Object): boolean**</span>  
+
+<code>图表截屏,图片格式png</code>  
+
+参数：  
+
+jsonData：截屏参数,Json对象,定义如下：  
+
+> path：截屏保存图片文件路径（包含文件名）,支持res: file:,字符串类型,必选项； 
+
+返回值：截屏是否成功，成功返回true，失败返回false  
+
+
 
 
