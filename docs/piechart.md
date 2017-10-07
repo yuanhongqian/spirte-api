@@ -223,39 +223,39 @@ jsonData：参数，Json格式，格式定义如下：
 
 **基础设置**  
 
-> usePercentValues：显示时是否使用百分比代替原始数据，boolean型，默认false
-> highlightPerTapEnabled：是否点击扇区突出显示，boolean型，默认为true
-> extraOffsets：图表周边空白间距，上 右 下 左，字符类型，如 10 5 10 5 默认 0 0 0 0  
+> usePercentValues：显示时是否使用百分比代替原始数据，boolean型，默认false  
+> highlightPerTapEnabled：是否点击扇区突出显示，boolean型，默认为true  
+> extraOffsets：图表周边空白间距，上 右 下 左，字符类型，如 10 5 10 5 默认 0 0 0 0    
 
 **中间圆区域设置 **  
 
-> drawHoleEnabled：是否绘制绘制中心圆孔，boolean型，默认true
-> drawCenterText：是否绘制中心文字，boolean型，默认为true
-> centerTextSize：中心文字字体大小，数字类型，默认16
-> centerTextColor：中心文字色值，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#000000
-> holeColor：中心圆孔色值，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#ffffff
-> holeRadius：中间圆孔所占总区域百分比，【0-1】，默认0.5
-> transparentCircleColor：中心圆孔外部遮罩色值，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#ffffff
-> transparentCircleRadius：中间圆孔外部遮罩所占总区域百分比，，取值范围【0-1】，默认0.55
-> transparentCircleAlpha：中间圆孔外部遮罩透明度，数字类型，取值范围【0-255】，0透明，255不透明，默认100
+> drawHoleEnabled：是否绘制绘制中心圆孔，boolean型，默认true  
+> drawCenterText：是否绘制中心文字，boolean型，默认为true  
+> centerTextSize：中心文字字体大小，数字类型，默认16  
+> centerTextColor：中心文字色值，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#000000  
+> holeColor：中心圆孔色值，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#ffffff  
+> holeRadius：中间圆孔所占总区域百分比，【0-1】，默认0.5  
+> transparentCircleColor：中心圆孔外部遮罩色值，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#ffffff  
+> transparentCircleRadius：中间圆孔外部遮罩所占总区域百分比，，取值范围【0-1】，默认0.55  
+> transparentCircleAlpha：中间圆孔外部遮罩透明度，数字类型，取值范围【0-255】，0透明，255不透明，默认100  
 
 **拖动设置**  
 
-> rotationEnabled：是否允许手动拖动旋转，boolean型，默认true
-> rotationAngle：图表初始旋转角度，数字类型，取值范围 【0-360】， 默认270，
-> dragCoef：拖送释放后摩擦减速系数，数字类型，取值范围【0-1】，0：最大摩擦 1：无摩擦，默认0.8
+> rotationEnabled：是否允许手动拖动旋转，boolean型，默认true  
+> rotationAngle：图表初始旋转角度，数字类型，取值范围 【0-360】， 默认270  
+> dragCoef：拖送释放后摩擦减速系数，数字类型，取值范围【0-1】，0：最大摩擦 1：无摩擦，默认0.8  
 
 **Entry值设置 **  
 
-> entryLabelColor：图表Entry 文字颜色，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#ffffff
-> entryLabelTextSize：图表Entry文字字体大小，数字类型，默认12
+> entryLabelColor：图表Entry 文字颜色，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#ffffff  
+> entryLabelTextSize：图表Entry文字字体大小，数字类型，默认12  
 
 **描述区域设置 **
 
-> legendDrawInside：是否显示在图表区域内部，boolean型，默认false  
-> legendVerticalAlignment：Y轴位置，字符串枚举型，【top, center, bottom】，默认top  
-> legendHorizontalAlignment：X轴位置，字符串枚举型，【left, center, right】，默认right  
-> legendOrientation：排序方向，字符串枚举型，【horizontal, vertical】，默认vertical  
+> legendDrawInside：是否显示在图表区域内部，boolean型，默认false   
+> legendVerticalAlignment：Y轴位置，字符串枚举型，【top, center, bottom】，默认top    
+> legendHorizontalAlignment：X轴位置，字符串枚举型，【left, center, right】，默认right    
+> legendOrientation：排序方向，字符串枚举型，【horizontal, vertical】，默认vertical    
 > legendXEntrySpace：描述区域X轴间隔，数字类型，默认6  
 > legendYEntrySpace：描述区域Y轴间隔，数字类型，默认0  
 > legendXOffset：描述区域与图表X轴边缘间距，数字类型，默认5  
@@ -267,7 +267,7 @@ jsonData：参数，Json格式，格式定义如下：
 
 **文字样式** 
 
-> valueTextColor：图表值文字颜色，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#ffffff  
+> valueTextColor：图表值文字颜色，字符串类型，支持RGB（rgb(255, 0, 0)）,十六进制（#rrggbb），默认#ffffff   
 > valueTextSize：图表值文字字体大小，数字类型，默认11  
 
 **文字绘制区域样式 **
