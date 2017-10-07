@@ -329,7 +329,7 @@ var json = {};
 json.dbName = dbName;
 json.sql = "select * from " + tableName;
 
-var qu= db.query(json:string): Array&lt;Object&gt;;
+var quarray= db.query(json);
 if( quarray.length == 0 ){
    // 查询无结果或失败
     return;
