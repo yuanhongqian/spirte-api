@@ -1,6 +1,90 @@
 # 版本迭代
 
 
+----------
+
+**Sprite-1.2.0**  
+ 
+**UI组件：  ** 
+
+1：烽火IM组件；   
+
+2：图片预览组件；   
+
+3：加密输入键盘组件；   
+
+4：candleChart蜡烛图BI组件；   
+
+5：combinedchart复合图BI支持蜡烛图；   
+
+
+**功能组件：   **
+
+1：高德定位组件；   
+
+2：Mob免费短信组件；   
+
+3：websocket组件；   
+
+4：启用系统设置界面相关方法封装；   
+
+5：系统本地通知组件；   
+
+6：指纹识别；   
+
+7：NFC相关；   
+
+8：系统日程功能； 
+
+**功能完善： **  
+
+1：应用加解密支持，即html，uixml，js，css等应用文件支持加解密，同Mbuild工具配合，Mbuild导出应用插件时加密，Sprite支持加载加密文件；   
+
+2：JS service 后台js执行环境；   
+
+3：支持html页面调用并传参；   
+
+4：list组件功能增强，包括：list的section支持自定义；list的section实现折叠效果；list的cell动态修改dom布局；   
+
+5：slider功能增强，增加半屏展示，增加滑动动画样式；   
+
+6：iOS支持控件边框阴影效果；   
+
+7：增加border单独设置支持；   
+
+8：Android的性能持续性优化；   
+
+9: 插件定义完善：iOS支持xcode权限设置及plist设置，如：步数健康类插件；   
+
+10: Mbuild对接完善：增加appversion等及增加基座升级；   
+
+11:text支持设置html文本用于富文本显示；   
+
+12：Http类download方法增加fileName下载文件名设置；  
+ 
+13：text文本组件支持设置长按弹出系统选择菜单；   
+
+14：list完善scrollToPosition方法；   
+
+15：App增加程序启动后第三方调用事件监听；   
+
+16：容联云/烽火IM支持 IM用户头像https获取；   
+
+17：webview require调整；   
+
+18：Native组件增加分享文件功能；   
+
+19：容联云IM增加链接触发及文件下载触发事件；   
+
+20：百度地图添加标注点增加附加参数设置；   
+
+21：dom对象支持通过xml支持添加节点；   
+
+22：App组件增加获取包名/bundleId方法；   
+
+23：textfield及textarea增加删除键监听；    
+
+
 
 ----------
 
