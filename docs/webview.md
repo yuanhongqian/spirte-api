@@ -497,8 +497,8 @@ webview.html页面代码：
         var ui = null;
         document.addEventListener("plusready", function () {
             //webview中需要在页面加载完毕的时候在require组件
-            ui = require("UI");
-            file = require("File");
+            ui = Sprite.require("UI");
+            file = Sprite.require("File");
             init();
         }, false);
 
