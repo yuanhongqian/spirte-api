@@ -1169,6 +1169,14 @@ var domid =  v.getId();
 > [clear(): void 清空容器内所有子节点](#rqczdom_10) 
 >  
 > [getInnerHTML(): string 动态获取容器内子节点xml](#rqczdom_11)   
+>
+> [appendChildByXml(xml:string,domObj: object): void  容器添加子节点至尾部](#rqczdom_12)
+>
+>  [insertBeforeByXml(xml:string,beforeDomObj: IElement,domObj: object) void   容器在指定的已有的子节点之前插入新节点](#rqczdom_13)
+> 
+>   [insertAfterByXml (xml:string,afterDomObj: IElement,domObj: object): void  容器在指定的已有的子节点之后插入新节点](#rqczdom_14)
+>  
+>    [setInnerHTML(xml:string,domObj: object): void   设置容器内容](#rqczdom_15)
 
 
 
@@ -1407,3 +1415,63 @@ box.clear();
 var box = document.getElement("box_id");  
 var strxml =  box.getInnerHTML(); 
 ```  
+
+
+<span id="rqczdom_12">**appendChildByXml(xml:string,domObj: object): void**</span>
+
+<code>容器添加子节点至尾部</code>   
+
+参数： 
+
+xml：需添加xml文本数据片段，,必选项；  
+
+domObj：当前js运行环境对象,可选参数,component模板中使用,传入this即可；
+
+返回值：无
+
+
+<span id="rqczdom_13">**insertBeforeByXml(xml:string,beforeDomObj: IElement,domObj: object) void**</span>
+
+<code>容器在指定的已有的子节点之前插入新节点</code>   
+
+容器在指定的已有的子节点之前插入新节点  
+
+参数：  
+
+xml：需添加xml文本数据片段，,必选项；  
+
+beforeDomObj：在其之前插入新节点的子节点,必选项；  
+
+domObj：当前js运行环境对象,可选参数,component模板中使用,传入this即可；
+ 
+返回值：无  
+
+
+
+<span id="rqczdom_14">**insertAfterByXml (xml:string,afterDomObj: IElement,domObj: object): void**</span>
+
+<code>容器在指定的已有的子节点之后插入新节点</code>   
+
+参数：  
+
+xml：需添加xml文本数据，,必选项；  
+
+afterDomObj：在其之后插入新节点的子节点,必选项；  
+
+domObj：当前js运行环境对象,可选参数,component模板中使用,传入this即可；
+ 
+返回值：无  
+
+
+<span id="rqczdom_15">**setInnerHTML(xml:string,domObj: object): void*</span>
+
+<code>设置容器内容</code>   
+
+参数：  
+
+xml：需添加xml文本数据，,必选项；  
+
+返回值：无
+
+
+
