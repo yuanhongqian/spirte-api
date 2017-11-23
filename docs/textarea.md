@@ -137,6 +137,8 @@ return键显示样式，取值为【default，go，search，next，send】
 > next：下一项；
 > 
 > send： 发送
+>
+> done： 完成 
 
   
 <span id="sx_11">**disabled**</span>  
