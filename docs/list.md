@@ -238,7 +238,7 @@ list.on("itemClick", function (e, position, sectionPostion) {
 ```
 
 
-<span id="sj_6">**scrollChange**</span>  
+<span id="sj_6">**sectionStatus**</span>  
 
 <code>列表section区域折叠/展开时触发</code>  
 
