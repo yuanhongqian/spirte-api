@@ -221,13 +221,19 @@ dragtop.on("click", function(e) {
 ```
 
 
-<span id="ff_3">**reset(): void**</span>  
+<span id="ff_3">**reset(jsonData:Object): void**</span>  
 
 <code>容器复位隐藏</code>    
 
 refresh容器复位隐藏，一般刷新完毕后调用该方法  
 
-参数：无  
+参数：
+
+jsonData：模拟触发配置参数，Json对象，可选参数，定义如下：
+
+> time：弹出/恢复 refresh区域动画时间，数字类型，单位毫秒；
+
+返回值：无
 
 返回值：无
 
