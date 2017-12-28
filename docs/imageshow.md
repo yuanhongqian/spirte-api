@@ -57,10 +57,6 @@ imageshow为内置UI组件
 
 <h2 id="cid_3">事件</h2>
 
-
-	,
-
-
 **click**  
 
 <code>点击图片时触发</code>  
