@@ -115,7 +115,7 @@ param对象为Json对象,定义如下：
 > shadowLow：节点底下影值，数字类型
 
 
-**注：**  折线highlightEnabled设置为true时触发
+**注：**  highlightEnabled设置为true时触发
 
 
 
@@ -413,7 +413,8 @@ jsonData：蜡烛图数据，json数据，定义如下：
 >  - shadowHigh：节点顶上影值，数字类型
 >  - shadowLow：节点底下影值，数字类型
 > - axis：基准Y轴，字符串枚举型，【left，right】，默认left即左侧Y轴
-> - style：样式，json格式定义如下：
+> - style：样式，json格式定义如下：   
+> 
 >  **//影线**
 >  - shadowWidth：影线size，数字类型，单位dp，默认1
 >  - shadowClose：影线颜色，字符串类型，支持RGB（rgb（255,0,0）），十六进制(#rrggbb)，默认#000000;
