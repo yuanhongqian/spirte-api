@@ -150,6 +150,10 @@
 					"mdlink": "safetextfield"
 				},
 				{
+					"subject": "safetextfield 安全键盘",
+					"mdlink": "safetextfield"
+				},
+				{
 					"subject": "imageshow  图片预览组件",
 					"mdlink": "imageshow"
 				}
