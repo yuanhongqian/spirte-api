@@ -116,11 +116,15 @@ param对象为Json对象,定义如下：
 > index：节点索引，从0开始，数字类型 
 > 
 > **//柱状图/折线图**
-> xValue：节点X轴值，数字类型
+> 
+> xValue：节点X轴值，数字类型   
+>  
 > yValue：节点Y轴值，数字类型
 > 
-> **//蜡烛图**
-> xValue：节点X轴值，数字类型
+> **//蜡烛图**  
+> 
+> xValue：节点X轴值，数字类型  
+>    
 > yValue：节点Y轴值，数字类型，(shadowH \+ shadowL)/2
 > 
 > open：节点初始值，数字类型
@@ -198,8 +202,7 @@ event事件对象包括：
 > [animateXY(jsonData:object):void  启动复合图XY轴动画](#ff_21)
 > 
 > [snapshot(jsonData:Object): boolean  图表截屏,图片格式png](#22)
-> 
-> [combineWith(domObj:IElement):void  与 bar / candle / combined / line chart 联动](#ff_23)
+
 > 
 
 
@@ -432,49 +435,50 @@ jsonData：参数，Json格式，格式定义如下：
 <code>设置复合图数据</code>   
 
 参数：  
-combineInfo：复合图数据，json数据，定义如下：
-**//折线图数据**
->lineInfo：折线图数据，数组类型，数组成员为json格式，定义如下：
+**combineInfo：**复合图数据，json数据，定义如下：     
+      
+**//折线图数据**     
+ lineInfo：折线图数据，数组类型，数组成员为json格式，定义如下：   
+> lineDatas：折线图数据，数组类型，数组成员为json格式，定义如下：     
 > - name：折线描述，字符串类型；
 > - datas：折线数据集，数组类型，数据成员为json格式，定义如下：
 >  - xValue：X轴数值，数字类型；
 >  - yValue：Y轴数值，数字类型；
 > - axis：折线基准Y轴，字符串枚举型，【left，right】，默认left即左侧Y轴
-> - style：折线样式，json格式定义如下：   
+> - style：折线样式，json格式定义如下：     
 > 
 >  **//线**
->    - lineWidth：线size，数字类型，单位dp，默认1
->    - lineColor：线颜色，字符串类型，支持RGB（rgb（255,0,0）），十六进制(#rrggbb)，默认#000000;
->    - lineMode：线模式，字符串枚举型，【normal，dashed】，normal：实线，dashed：虚线，默认normal；
->    - lineDrawMode：线绘制连接模式，字符串枚举型，【linear，stepped，cubic_bezier，horizontal_bezier】，linear：线性模式，stepped：步进线模式，cubic_bezier：3D弧度线模式，horizontal_bezier：横向3D弧度线模式，默认linear  
+>  - lineWidth：线size，数字类型，单位dp，默认1
+>  - lineColor：线颜色，字符串类型，支持RGB（rgb（255,0,0）），十六进制(#rrggbb)，默认#000000;
+>  - lineMode：线模式，字符串枚举型，【normal，dashed】，normal：实线，dashed：虚线，默认normal；
+>  - lineDrawMode：线绘制连接模式，字符串枚举型，【linear，stepped，cubic_bezier，horizontal_bezier】，linear：线性模式，stepped：步进线模式，cubic_bezier：3D弧度线模式，horizontal_bezier：横向3D弧度线模式，默认linear  
 > 
 >  **//高亮线**
->    - highlightEnabled：点击节点是否显示高亮线，boolean型，true:显示高亮线，false：不显示高亮线，默认true
->    - highlightLineWidth：高亮线size，数字类型，单位dp，默认1
->    - highlightLineColor：高亮线颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#ffbb73；
->    - highlightLineMode：高亮线模式，字符串枚举型，【normal，dashed】，normal：实线，dashed：虚线，默认normal
+>  - highlightEnabled：点击节点是否显示高亮线，boolean型，true:显示高亮线，false：不显示高亮线，默认true
+>  - highlightLineWidth：高亮线size，数字类型，单位dp，默认1
+>  - highlightLineColor：高亮线颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#ffbb73；
+>  - highlightLineMode：高亮线模式，字符串枚举型，【normal，dashed】，normal：实线，dashed：虚线，默认normal
 >   
 >  **//节点文字**
->    - drawValues：是否绘制节点值，boolean型，true：绘制；false：不绘制（默认）
->    - valueTextSize：节点文字大小，数字，单位dp，默认10；
->    - valueTextColor：描述区域文字颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb),默认#000000
+>  - drawValues：是否绘制节点值，boolean型，true：绘制；false：不绘制（默认）
+>  - valueTextSize：节点文字大小，数字，单位dp，默认10；
+>  - valueTextColor：描述区域文字颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb),默认#000000
 >  
 >  **//节点圆** 
->    - drawCircles：节点处是否绘制圆，boolean，true：绘制圆，false：不绘制圆，默认true
->    - circleRadius：节点绘制圆半径，数字，单位dp，默认2
->    - circleColor：节点绘制圆填充色，字符串类型，支持RGB（rgb（255,0,0）），十六进制(#rrggbb)，默认#ff0000
->    - drawCircleHole：节点处是否绘制中心圆孔，boolean，true：绘制圆孔，false：不绘制圆孔，默认true
->    - circleHoleRadius：节点绘制圆孔半径，数字，单位dp，默认1
->    - circleHoleColor：节点绘制圆孔填充色，字符串类型，支持RGB（rgb（255,0,0）），十六进制(#rrggbb)，默认#ffffff
+>  - drawCircles：节点处是否绘制圆，boolean，true：绘制圆，false：不绘制圆，默认true
+>  - circleRadius：节点绘制圆半径，数字，单位dp，默认2
+>  - circleColor：节点绘制圆填充色，字符串类型，支持RGB（rgb（255,0,0）），十六进制(#rrggbb)，默认#ff0000
+>  - drawCircleHole：节点处是否绘制中心圆孔，boolean，true：绘制圆孔，false：不绘制圆孔，默认true
+>  - circleHoleRadius：节点绘制圆孔半径，数字，单位dp，默认1
+>  - circleHoleColor：节点绘制圆孔填充色，字符串类型，支持RGB（rgb（255,0,0）），十六进制(#rrggbb)，默认#ffffff
 >
 >  **//填充色**
->    - drawFilled：是否绘制折线与X坐标值之间填充色，bool型，true：绘制；false：不绘制，默认false；
->    - filledColor：折线与X坐标值之间填充色色值，字符串类型，支持RGB（rgb（255,0,0）），十六进制(#rrggbb)，默认#8ceaff
->    - filledAlpha：折线与X坐标值之间填充色透明度，数字类型，取值范围【0-255】，0透明，255不透明，默认85
+>  - drawFilled：是否绘制折线与X坐标值之间填充色，bool型，true：绘制；false：不绘制，默认false；
+>  - filledColor：折线与X坐标值之间填充色色值，字符串类型，支持RGB（rgb（255,0,0）），十六进制(#rrggbb)，默认#8ceaff
+>  - filledAlpha：折线与X坐标值之间填充色透明度，数字类型，取值范围【0-255】，0透明，255不透明，默认85       
 
-
-**//柱状图数据** 
-barInfo：柱状图数据，json格式，定义如下：
+**//柱状图数据**       
+barInfo：柱状图数据，json格式，定义如下：     
 > barDatas：柱状图数据，数组类型，数组成员为json格式，定义如下：
 > - name：柱状描述，字符串类型
 > - datas：柱状数据集，数组类型，数据成员为json格式，定义如下：
@@ -495,8 +499,8 @@ barInfo：柱状图数据，json格式，定义如下：
 >  - valueTextSize：节点文字大小，数字，单位dp，默认10；
 >  - valueTextColor：描述区域文字颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#000000；
   
-**//蜡烛图数据**  
-candleInfo：蜡烛图数据，json类型，定义如下：
+**//蜡烛图数据**    
+candleInfo：蜡烛图数据，json类型，定义如下：      
 > candleDatas：蜡烛图数据，数组类型，数组成员为json格式，定义如下：
 > - name：蜡烛图描述，字符串类型；
 > - datas：蜡烛图数据集，数组类型，数据成员为json格式，定义如下：
@@ -508,38 +512,38 @@ candleInfo：蜡烛图数据，json类型，定义如下：
 > - axis：基准Y轴，字符串枚举型，【left，right】，默认left即左侧Y轴；
 > - style：样式，json格式定义如下：
 > **//影线**
->    - shadowWidth：影线size，数字类型，单位dp，默认1；
->    - shadowColor：影线颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#000000；   
->    - showCandleBar：是否显示蜡烛柱体区域，bool型，true：显示柱体（默认）；false：不显示柱体；
->    - shadowColorSameAsCandle：影线颜色是否与柱体色相同，bool型，true：相同（默认），false：不同；
+>  - shadowWidth：影线size，数字类型，单位dp，默认1；
+>  - shadowColor：影线颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#000000；   
+>  - showCandleBar：是否显示蜡烛柱体区域，bool型，true：显示柱体（默认）；false：不显示柱体；
+>  - shadowColorSameAsCandle：影线颜色是否与柱体色相同，bool型，true：相同（默认），false：不同；
 > **//蜡烛柱体**
->    - decreasingColor：减柱(open&gt;close)颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#7af254；   
->    - decreasingPaintStyle：减柱(open&gt;close)绘制模式，字符串枚举型，【fill，stroke】，默认stroke；
->    - increasingColor：增柱(open&lt;close)颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#ff0000
->    - increasingPaintStyle：增柱(open&lt;close)绘制模式，字符串枚举型，【fill，stroke】，默认fill；
->    - neutralColor：平柱(open == close)颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#ff0000；  
->    - barsSpace：蜡烛柱体之间间隔比例，数字类型，0-0.45，默认0.1；
+>  - decreasingColor：减柱(open&gt;close)颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#7af254；   
+>  - decreasingPaintStyle：减柱(open&gt;close)绘制模式，字符串枚举型，【fill，stroke】，默认stroke；
+>  - increasingColor：增柱(open&lt;close)颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#ff0000
+>  - increasingPaintStyle：增柱(open&lt;close)绘制模式，字符串枚举型，【fill，stroke】，默认fill；
+>  - neutralColor：平柱(open == close)颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#ff0000；  
+>  - barsSpace：蜡烛柱体之间间隔比例，数字类型，0-0.45，默认0.1；
 >  **//高亮线**
->    - highlightEnabled：点击节点是否显示高亮线，boolean型，true：显示高亮线，false：不显示高亮线，默认true；  
->    - highlightLineWidth：高亮线size，数字类型，单位dp，默认1；
->    - highlightLineColor：高亮线颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#ffbb73；  
->    - highlightLineMode： 高亮线模式，字符串枚举型，【normal，dashed】，normal：实线，dashed：虚线，默认normal；
->    - //节点值
->    - drawValues:是否绘制文字，boolean型，true：绘制；false：不绘制（默认）；
->    - valueTextSize：文字大小，数字，单位dp，默认10；
->    - valueTextColor：文字颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#000000；
+>  - highlightEnabled：点击节点是否显示高亮线，boolean型，true：显示高亮线，false：不显示高亮线，默认true；  
+>  - highlightLineWidth：高亮线size，数字类型，单位dp，默认1；
+>  - highlightLineColor：高亮线颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#ffbb73；  
+>  - highlightLineMode： 高亮线模式，字符串枚举型，【normal，dashed】，normal：实线，dashed：虚线，默认normal；
+>  **//节点值**
+>  - drawValues:是否绘制文字，boolean型，true：绘制；false：不绘制（默认）；
+>  - valueTextSize：文字大小，数字，单位dp，默认10；
+>  - valueTextColor：文字颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#000000；
  
-> xAxisMinimum：设置图表显示x轴最小值，数字类型，默认无
-> 
-> xAxisMaximum：设置图表显示x轴最大值，数字类型，默认无
-> 
-> yLeftAxisMinimum：设置图表显示左侧Y轴最小值，数字类型，默认无
-> 
-> yLeftAxisMaximum：设置图表显示左侧Y轴最大值，数字类型，默认无
-> 
-> yRightAxisMinimum：设置图表显示右侧Y轴最小值，数字类型，默认无
-> 
-> yRightAxisMaximum：设置图表显示右侧Y轴最大值，数字类型，默认无
+ xAxisMinimum：设置图表显示x轴最小值，数字类型，默认无
+ 
+ xAxisMaximum：设置图表显示x轴最大值，数字类型，默认无
+ 
+ yLeftAxisMinimum：设置图表显示左侧Y轴最小值，数字类型，默认无
+ 
+ yLeftAxisMaximum：设置图表显示左侧Y轴最大值，数字类型，默认无
+ 
+ yRightAxisMinimum：设置图表显示右侧Y轴最小值，数字类型，默认无
+ 
+ yRightAxisMaximum：设置图表显示右侧Y轴最大值，数字类型，默认无
 
 返回值：无  
 
