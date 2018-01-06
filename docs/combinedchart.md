@@ -489,15 +489,15 @@ barInfo：柱状图数据，json格式，定义如下：
 > - axis：柱状基准Y轴，字符串枚举型，【left，right】，默认left即左侧Y轴
 > - style：柱状样式，json格式定义如下：
 > 
-> **//填充色**
+>  **//填充色**
 >  - colors：字符串数组，图表根据填充色数组依次填充柱体，数组元素为字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#8ceaff
->  
-> **//高亮色**
+> 
+>  **//高亮色**
 >  - highlightEnabled：点击是否显示高亮色，boolean型，true：点击高亮，false：点击不高亮，默认true
 >  - highlightColor：高亮填充颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#ffbb73
 >  - highlightAlpha：高亮色遮罩透明度，数字类型，取值范围【0-255】，0透明，255不透明，默认120；
->  
-> **//节点文字**
+> 
+>  **//节点文字**
 >  - drawValues：是否绘制节点值，boolean型，true：绘制（默认）；false：不绘制
 >  - valueTextSize：节点文字大小，数字，单位dp，默认10；
 >  - valueTextColor：描述区域文字颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#000000；
@@ -515,25 +515,26 @@ candleInfo：蜡烛图数据，json类型，定义如下：
 > - axis：基准Y轴，字符串枚举型，【left，right】，默认left即左侧Y轴；
 > - style：样式，json格式定义如下：
 > 
-> **//影线**
+>  **//影线**
 >  - shadowWidth：影线size，数字类型，单位dp，默认1；
 >  - shadowColor：影线颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#000000；   
 >  - showCandleBar：是否显示蜡烛柱体区域，bool型，true：显示柱体（默认）；false：不显示柱体；
 >  - shadowColorSameAsCandle：影线颜色是否与柱体色相同，bool型，true：相同（默认），false：不同；
->  
-> **//蜡烛柱体**
+> 
+>  **//蜡烛柱体**
 >  - decreasingColor：减柱(open&gt;close)颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#7af254；   
 >  - decreasingPaintStyle：减柱(open&gt;close)绘制模式，字符串枚举型，【fill，stroke】，默认stroke；
 >  - increasingColor：增柱(open&lt;close)颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#ff0000
 >  - increasingPaintStyle：增柱(open&lt;close)绘制模式，字符串枚举型，【fill，stroke】，默认fill；
 >  - neutralColor：平柱(open == close)颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#ff0000；  
 >  - barsSpace：蜡烛柱体之间间隔比例，数字类型，0-0.45，默认0.1；
+> 
 >  **//高亮线**
 >  - highlightEnabled：点击节点是否显示高亮线，boolean型，true：显示高亮线，false：不显示高亮线，默认true；  
 >  - highlightLineWidth：高亮线size，数字类型，单位dp，默认1；
 >  - highlightLineColor：高亮线颜色，字符串类型，支持RGB(rgb(255,0,0))，十六进制(#rrggbb)，默认#ffbb73；  
 >  - highlightLineMode： 高亮线模式，字符串枚举型，【normal，dashed】，normal：实线，dashed：虚线，默认normal；
->  
+> 
 >  **//节点值**
 >  - drawValues:是否绘制文字，boolean型，true：绘制；false：不绘制（默认）；
 >  - valueTextSize：文字大小，数字，单位dp，默认10；
