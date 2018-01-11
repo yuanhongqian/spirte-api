@@ -9,7 +9,7 @@ simplelist使用了模板机制及数据绑定来实现业务数据与列表UI�
 simplelist主要用于新闻展示类列表场景，开发者可根据场景需要选择使用list或simplelist。
 
 
-<h2 id="cid_0">子节点</h2>
+<h2 id="cid_2">子节点</h2>
 
 <code>header</code>
 
