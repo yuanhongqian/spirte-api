@@ -9,37 +9,37 @@ simplelist使用了模板机制及数据绑定来实现业务数据与列表UI�
 simplelist主要用于新闻展示类列表场景，开发者可根据场景需要选择使用list或simplelist。
 
 
-<h2 id="cid_2">子节点</h2>
+<h2 id="">子节点</h2>
 
-<code>header</code>
+*header*
 
 放置列表中固定于顶部显示的界面，采用flexbox模型不就，支持嵌套任意类型的或容器，使用和box容器一致。
 
 通过simplelist对象getHeader()方法获取header对象后，可进行header容器内UI
 
-<code>cell</cell>
+*cell*
 
 用于放置列表item模板布局文件，采用flexbox模型布局，支持嵌套任意类型的UI组件或容器，使用和box容器一致。
 
 某些复杂列表页面需要可能具有多个模板，支持放置多个cell容器用于区分，此时cell需要设置不同id属性用于区分。
 
-<code>footer</code>
+*footer*
 
 放置列表中固定于底部显示的界面，采用flexbox模型布局，支持嵌套任意类型的UI组件或容器，使用和box容器一致。
 
 通过simplelist对象getFooter()方法获取footer对象后，可进行footer容器内UI组件相关操作，操作完毕后调用simplelist对象的refreshFooter方法刷新。
 
-<code>refresh</code>
+*refresh*
 
 scroll处于垂直滚动模式时，可以包裹refresh容器用于实现下拉刷新及上拉刷新效果，详见[refresh](https://gitdocument.exmobi.cn/sprite-api/refresh.html)容器章节
 
-<code>left</code>
+*left*
 
 用于放置列表左侧划出区域布局文件，采用flexbox模型布局，支持嵌套任意类型的UI组件或容器，使用和box容器一致。
 
 simplelist列表中left最外层区域高度与item高度保持一致。
 
-<code>right</code>
+*right*
 
 用于放置右侧划出区域布局文件，采用flexbox模型布局，支持嵌套任意类型的UI组件或容器，使用和box容器一致。
 
@@ -121,11 +121,13 @@ simplelist列表中right最外层区域高度与item高度保持一致。
 >
 > flexbox布局：align-self，flex
 
+
+
 <h2>事件</h2>
 
-**scrollToBottom**
+<span>**scrollToBottom**</span>
 
-滚动条滚动至底部时触发，event事件对象包括：
+<code>滚动条滚动至底部时触发，event事件对象包括：</code>
 
 > type：事件类型，字符串类型，固定值：scrollToBottom
 > 
@@ -135,9 +137,9 @@ simplelist列表中right最外层区域高度与item高度保持一致。
 
 注：该触发事件一般与bottomDistance属性配合使用
 
-**scrollStart**
+<span>**scrollStart**</span>
 
-滚动开始时触发，event事件对象包括：
+<code>滚动开始时触发，event事件对象包括：</code>
 
 > type：事件类型，字符串类型，固定值：scrollStart；
 > 
@@ -145,9 +147,9 @@ simplelist列表中right最外层区域高度与item高度保持一致。
 > 
 > timestamp：事件触发的时间戳，单位毫秒，数字类型
 
-**scrollChange**
+<span>**scrollChange**</span>
 
-滚动时多次触发，event事件对象包括：
+<code>滚动时多次触发，event事件对象包括：</code>
 
 > type：事件类型，字符串类型，固定值：scrollChange；
 > 
@@ -161,9 +163,9 @@ param对象为json对象，定义如下：
 > 
 > oldY：上次y轴滚动位移坐标值，数字类型
 
-**scrollStop**
+<span>**scrollStop**</span>
 
-滚动结束时触发，event事件对象包括：
+<code>滚动结束时触发，event事件对象包括：</code>
 
 > type：事件类型，字符串类型，固定值：scrollStop；
 > 
@@ -171,9 +173,9 @@ param对象为json对象，定义如下：
 > 
 > timestamp：事件触发的时间戳，单位毫秒，数字类型
 
-**itemClick**
+<span>**itemClick**</span>
 
-列表项点击时触发，event事件对象包括：
+<code>列表项点击时触发，event事件对象包括：</code>
 
 > type：事件类型，字符串类型，固定值：itemClick；
 > 
@@ -185,9 +187,9 @@ param对象为json对象，定义如下：
 
 注：target返回dom对象只读。
 
-**leftItemClick**
+<span>**leftItemClick**</span>
 
-列表项左侧区域点击时触发，event事件对象包括：
+<code>列表项左侧区域点击时触发，event事件对象包括：</code>
 
 > type：事件类型，字符串类型，固定值：leftItemClick；
 > 
@@ -204,9 +206,9 @@ param对象为json对象，定义如下：
 2：target返回dom对象只读
 
 
-**rightItemClick**
+<span>**rightItemClick**</span>
 
-列表项右侧区域点击时触发，event事件对象，包括：
+<code>列表项右侧区域点击时触发，event事件对象，包括：</code>
 
 > type：事件类型，字符串类型，固定值：rightItemClick；
 > 
@@ -272,7 +274,7 @@ param对象为json对象，定义如下：
 
 
 
-<span id="ff_0"><code>**公共方法**</code></span>   
+<span id="ff_0">**公共方法**</span>   
 
 [事件相关](https://gitdocument.exmobi.cn/sprite-api/ggff.html#cid_0)，包括：
 
