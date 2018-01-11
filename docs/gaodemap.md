@@ -148,7 +148,7 @@ bool型
 > 
 > [mapStatusChangeFinish   地图状态改变结束触发](#sj_5)
 >
-> [mapStatusChange 地图状态改变过程中国触发 ](#sj_10)
+> [mapStatusChange 地图状态改变过程中触发 ](#sj_10)
 >
 > **普通Mark点事件**  
 > 
@@ -224,7 +224,7 @@ param对象为Json对象,定义如下：
 
 <span id="sj_10">**mapStatusChange**</span>
 
-<code>地图状态改变过程中国触发</code>
+<code>地图状态改变过程中触发</code>
 
 event事件对象包括：  
 

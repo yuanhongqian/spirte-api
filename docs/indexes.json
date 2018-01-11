@@ -156,8 +156,11 @@
 				{
 					"subject": "gaodemap 高德地图组件",
 					"mdlink": "gaodemap"
+				},
+				{
+					"subject": "simplelist  简单列表组件",
+					"mdlink": "simplelist"
 				}
-				
 				
 				
 			 ]
