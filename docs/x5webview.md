@@ -358,49 +358,83 @@ var version = device.getVersion();
 <code>内置功能组件</code>
 
 > [App](https://gitdocument.exmobi.cn/sprite-api/app.html)
+> 
 > [Window ](https://gitdocument.exmobi.cn/sprite-api/window.html)注：
 > - 方法不支持：hideSip();
 > - 事件不支持：loader，animator
 > 
 > [Device](https://gitdocument.exmobi.cn/sprite-api/device.html)
+> 
 > [Native](https://gitdocument.exmobi.cn/sprite-api/native.html)
+> 
 > [Encryption](https://gitdocument.exmobi.cn/sprite-api/encryption.html)
+> 
 > [Time](https://gitdocument.exmobi.cn/sprite-api/time.html)
+> 
 > [Http](https://gitdocument.exmobi.cn/sprite-api/http.html)
+> 
 > [NetInfo](https://gitdocument.exmobi.cn/sprite-api/netinfo.html)
+> 
 > [File](https://gitdocument.exmobi.cn/sprite-api/file.html)
+> 
 > [UI](https://gitdocument.exmobi.cn/sprite-api/ui.html)
 > [MemCache](https://gitdocument.exmobi.cn/sprite-api/memcache.html)
+> 
 > [DiskCache](https://gitdocument.exmobi.cn/sprite-api/diskcache.html)
+> 
 > [Camera](https://gitdocument.exmobi.cn/sprite-api/camera.html)
+> 
 > [Console](https://gitdocument.exmobi.cn/sprite-api/console.html)
+> 
 > [Pixel](https://gitdocument.exmobi.cn/sprite-api/pixel.html)
+> 
 > [ImageUtil](https://gitdocument.exmobi.cn/sprite-api/imageutil.html)
+> 
 > [Location](https://gitdocument.exmobi.cn/sprite-api/location.html)
 
 
 <code>外置功能组件</code>
 
 > [Db](https://gitdocument.exmobi.cn/sprite-api/db.html)
+> 
 > [DbCipher](https://gitdocument.exmobi.cn/sprite-api/dbcipher.html)
+> 
 > [Barcode](https://gitdocument.exmobi.cn/sprite-api/barcode.html)
+> 
 > [XmlDocument](https://gitdocument.exmobi.cn/sprite-api/xmldocument.html)
+> 
 > [XmlElement](https://gitdocument.exmobi.cn/sprite-api/xmlelement.html)
+> 
 > [AccessAuth](https://gitdocument.exmobi.cn/sprite-api/accessauth.html)
+> 
 > [VideoUtil](https://gitdocument.exmobi.cn/sprite-api/videoutil.html)
+> 
 > [Phone](https://gitdocument.exmobi.cn/sprite-api/phone.html)
+> 
 > [Sms](https://gitdocument.exmobi.cn/sprite-api/sms.html)
 > [Contact](https://gitdocument.exmobi.cn/sprite-api/contact.html)
+> 
 > [AudioPlay](https://gitdocument.exmobi.cn/sprite-api/audioplay.html)
+> 
 > [AudioRecord](https://gitdocument.exmobi.cn/sprite-api/audiorecord.html)
+> 
 > [MapUtil](https://gitdocument.exmobi.cn/sprite-api/maputil.html)
+> 
 > [IapPay](https://gitdocument.exmobi.cn/sprite-api/iappay.html)
+> 
 > [WeiXin](https://gitdocument.exmobi.cn/sprite-api/weixin.html)
+> 
 > [Qq](https://gitdocument.exmobi.cn/sprite-api/qq.html)
 > [WeiBo](https://gitdocument.exmobi.cn/sprite-api/weibo.html)
+> 
 > [BaiduLocation](https://gitdocument.exmobi.cn/sprite-api/baidulocation.html)
+> 
 > [AliPay](https://gitdocument.exmobi.cn/sprite-api/alipay.html)
+> 
 > [BaiduVoice](https://gitdocument.exmobi.cn/sprite-api/baiduvoice.html)
+> 
 > [BaiduTts](https://gitdocument.exmobi.cn/sprite-api/baidutts.html)
+> 
 > [SanforVpn](https://gitdocument.exmobi.cn/sprite-api/sangforvpn.html)
+> 
 > [ExMobiPush](https://gitdocument.exmobi.cn/sprite-api/exmobipush.html)
