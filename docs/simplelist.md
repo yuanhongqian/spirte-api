@@ -441,7 +441,7 @@ jsonData：滚动参数，json对象，定义如下：
 
 > scrollType：滚动位置，字符串枚举型，必选项，【top，bottom】
 > - top：footer区域顶边与容器顶边对齐；
-> -bottom：footer区域底边与容器底边对齐；
+> - bottom：footer区域底边与容器底边对齐；
 > 
 > animated：滚动是是否启用动画，bool型，可选项，true:启用动画；false：不启用动画（默认）；
 
@@ -542,7 +542,8 @@ jsonData：滚动参数，json对象，定义如下：
 参数： 
 
 captureTouchEvent：滚动容器是否拦截子组件touch事件，bool型。
-> true: 拦截子组件touch事件
+> true：拦截子组件touch事件
+> 
 > false：不拦截子组件touch事件
 
 返回值：无
@@ -557,6 +558,7 @@ captureTouchEvent：滚动容器是否拦截子组件touch事件，bool型。
 
 返回值：滚动容器是否拦截子组件touch事件，bool型
 > true：拦截子组件touch事件
+> 
 > false：不拦截子组件touch事件
 
 注：默认拦截子组件touch事件

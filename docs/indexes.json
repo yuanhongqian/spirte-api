@@ -160,6 +160,10 @@
 				{
 					"subject": "simplelist  简单列表组件",
 					"mdlink": "simplelist"
+				},
+				{
+					"subject": "SimpleListAdapter  简单列表适配器组件",
+					"mdlink": "SimpleListAdapter"
 				}
 				
 				
