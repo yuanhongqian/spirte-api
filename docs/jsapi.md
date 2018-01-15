@@ -17,41 +17,45 @@ Sprite采用CommonJS规范，通过require("模块标识")来实现对系统api�
 
 > [App：应用信息获取类](https://gitdocument.exmobi.cn/sprite-api/app.html)
 > 
-> Window：页面操作相关类
+> [Window：页面操作相关类](https://gitdocument.exmobi.cn/sprite-api/window.html)
 > 
-> Document：页面Dom操作类
+> [Document：页面Dom操作类](https://gitdocument.exmobi.cn/sprite-api/document.html)
 > 
-> Device：设备信息获取类
+> [Device：设备信息获取类](https://gitdocument.exmobi.cn/sprite-api/device.html)
 > 
-> Native：原生程序相关操作类
+> [Native：原生程序相关操作类](https://gitdocument.exmobi.cn/sprite-api/native.html)
 > 
-> Encryption：编/解码工具类
+> [Encryption：编/解码工具类](https://gitdocument.exmobi.cn/sprite-api/encryption.html)
 > 
-> Time：定时器类
+> [Time：定时器类](https://gitdocument.exmobi.cn/sprite-api/time.html)
 
 
 **数据存储**  
 
-> File：文件操作类
+> [File：文件操作类](https://gitdocument.exmobi.cn/sprite-api/file.html)
 > 
-> Db：数据库操作类
+> [Db：数据库操作类](https://gitdocument.exmobi.cn/sprite-api/db.html)
 > 
-> DbCipher：加密数据库操作类
+> [DbCipher：加密数据库操作类](https://gitdocument.exmobi.cn/sprite-api/dbcipher.html)
 > 
-> MemCache：内存缓存存取类
+> [MemCache：内存缓存存取类](https://gitdocument.exmobi.cn/sprite-api/memcache.html)
 > 
-> DiskCache：磁盘缓存存取类
+> [DiskCache：磁盘缓存存取类](https://gitdocument.exmobi.cn/sprite-api/diskcache.html)
 > 
-> Clipboard：系统剪切板类
+> [Clipboard：系统剪切板类](https://gitdocument.exmobi.cn/sprite-api/clipboard.html)
 
+**日程通知**
+
+> [Agenda：日程操作类]()
+> [LocalNotification：本地通知类]()
 
 **网络相关**  
 
-> Http：Http网络操作类
+> [Http：Http网络操作类]()
 > 
-> Socket：Socket网络操作类
+> [Socket：Socket网络操作类]()
 > 
-> NetInfo：网络信息相关类
+> [NetInfo：网络信息相关类]()
 
 
 **界面相关**   
