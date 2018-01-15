@@ -46,7 +46,8 @@ Sprite采用CommonJS规范，通过require("模块标识")来实现对系统api�
 
 **日程通知**
 
-> [Agenda：日程操作类]()
+> [Agenda：日程操作类](https://gitdocument.exmobi.cn/sprite-api/agenda.html)
+> 
 > [LocalNotification：本地通知类]()
 
 **网络相关**  
