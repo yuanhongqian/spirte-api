@@ -48,13 +48,13 @@ Sprite采用CommonJS规范，通过require("模块标识")来实现对系统api�
 
 > [Agenda：日程操作类](https://gitdocument.exmobi.cn/sprite-api/agenda.html)
 > 
-> [LocalNotification：本地通知类](https://gitdocument.exmobi.cn/sprite-api/localmotification.html)
+> [LocalNotification：本地通知类](https://gitdocument.exmobi.cn/sprite-api/localnotification.html)
 
 **网络相关**  
 
-> [Http：Http网络操作类]()
+> [Http：Http网络操作类](https://gitdocument.exmobi.cn/sprite-api/http.html)
 > 
-> [Socket：Socket网络操作类]()
+> [WebSocket：WebSocket网络操作类](https://gitdocument.exmobi.cn/sprite-api/websocket.html)
 > 
 > [NetInfo：网络信息相关类]()
 
