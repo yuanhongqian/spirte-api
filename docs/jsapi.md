@@ -56,43 +56,44 @@ Sprite采用CommonJS规范，通过require("模块标识")来实现对系统api�
 > 
 > [WebSocket：WebSocket网络操作类](https://gitdocument.exmobi.cn/sprite-api/websocket.html)
 > 
-> [NetInfo：网络信息相关类]()
+> [NetInfo：网络信息相关类](https://gitdocument.exmobi.cn/sprite-api/netinfo.html)
 
 
 **界面相关**   
 
-> UI：界面相关操作类
-> - 包括：alert，toast，confirm，selectFile，selectImage，selectTime，selectDate等
+> [UI：界面相关操作类](https://gitdocument.exmobi.cn/sprite-api/ui.html) 包括：alert，toast，confirm，selectFile，selectImage，selectTime，selectDate等
 
 **多媒体**  
 
 > Audio：音频操作相关类
 > 
-> - 包括：startRecord开始录音，stopRecord停止录音， playAudio播放音频，stopAudio停止播放音频等
+> - 包括：[AudioRecord录音操作类](https://gitdocument.exmobi.cn/sprite-api/audiorecord.html)，[AudioPlay音频播放类](https://gitdocument.exmobi.cn/sprite-api/audioplay.html)， 
 > 
-> Video：视频操作相关类
+> [VideoUtil：视频操作相关类](https://gitdocument.exmobi.cn/sprite-api/videoutil.html)
 > 
-> - 包括：recordShortVideo小视频录制，playVideo视频播放等
+> - 包括：recordShortVideo小视频录制，openVideo视频播放等
 
 **扫描拍照**  
 
-> Scan：条码/二维码扫描类 
+> [Barcode：条码/二维码扫描类](https://gitdocument.exmobi.cn/sprite-api/barcode.html) 
 > 
-> Camera：拍照，摄像操作类 
+> [Camera：拍照，摄像操作类](https://gitdocument.exmobi.cn/sprite-api/camera.html) 
 
 
 **电话相关**  
 
-> Phone：电话，短信，邮件操作类  
+> [Phone：电话，短信，邮件操作类](https://gitdocument.exmobi.cn/sprite-api/phone.html)  
 > 
-> Contact：通讯录操作类
+> [Contact：通讯录操作类](https://gitdocument.exmobi.cn/sprite-api/contact.html)
 
 
 **定位相关**  
 
-> Location：标准定位类 
+> [Location：标准定位类](https://gitdocument.exmobi.cn/sprite-api/location.html) 
 > 
-> BaiduLocation：百度定位类
+> [BaiduLocation：百度定位类](https://gitdocument.exmobi.cn/sprite-api/baidulocation.html)
+> 
+> [GaodeLocation：高德定位类](https://gitdocument.exmobi.cn/sprite-api/gaodelocation.html)
 
 
 **地图相关**  
