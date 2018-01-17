@@ -98,24 +98,19 @@ Sprite采用CommonJS规范，通过require("模块标识")来实现对系统api�
 
 **地图相关**  
 
-> MapUtil：地图工具类
+> [MapUtil：地图工具类](https://gitdocument.exmobi.cn/sprite-api/maputil.html)
 > 
 > - 包括：坐标转换，百度地图兴趣点检索，启动导航等   
 
 
 **硬件相关**  
+ 
 
-> MotionSensor：运动传感器类 
+> [Bluetooth：蓝牙通信类]() 
 > 
-> Compass：罗盘类
+> [Nfc：近场通信类]() 
 > 
-> MovementDetect：移动检测类 
-> 
-> Bluetooth：蓝牙通信类 
-> 
-> Nfc：近场通信类 
-> 
-> 3dTouch：iOS 3Dtouch类；
+> [TouchId：指纹识别组件]()；
 
 
 **图片处理**  
