@@ -106,11 +106,11 @@ Sprite采用CommonJS规范，通过require("模块标识")来实现对系统api�
 **硬件相关**  
  
 
-> [Bluetooth：蓝牙通信类]() 
+> [Bluetooth：蓝牙通信类](https://gitdocument.exmobi.cn/sprite-api/bluetooth.html) 
 > 
 > [Nfc：近场通信类]() 
 > 
-> [TouchId：指纹识别组件]()；
+> [TouchId：指纹识别组件](https://gitdocument.exmobi.cn/sprite-api/touchid.html)；
 
 
 **图片处理**  
