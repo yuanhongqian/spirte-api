@@ -4,6 +4,18 @@
 
 JPush 组件,用于实现对接极光Push推送模块相关功能。
 
+使用JPush推送需要先到极光推送官网注册开发者账号，要创建极光推送开发者帐号，请访问极光推送官方网站[https://www.jiguang.cn/push](https://www.jiguang.cn/push)
+
+<image src="image/jpush_1.png"/>
+
+创建帐号成功并登录后，进入极光控制台后，点击“创建应用”按钮。创建帐号进入极光推送后，首先显示的是创建应用的界面。若Android应用，则填上你的应用程序的名称以及Android包名这两项就可以了；若iOS应用，则需要上传Apns证书，并填写应用名。创建成功后会生成应用唯一AppKey。
+
+<image src="image/jpush_2.png"/>
+
+
+JPush并非Sprite的默认模块，若应用需要使用极光推送，则Edn或MBuilder打包是需要勾选极光推送模块，并填写appKey和channel。
+
+使用JPush组件来实现极光推送相关功能，相关方法调用可放置于任意页面中，但事件监听必须放置于homeJs应用入口JS中。
 
 使用时需要在js中引入 ：
 

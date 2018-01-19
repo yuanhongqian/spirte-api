@@ -369,7 +369,7 @@
 					"mdlink":"share" 
 				},
 				{
-					"subject":"Mob  短信",
+					"subject":"Mob  免费短信工具类",
 					"mdlink":"mob" 
 				},
 				{
@@ -403,6 +403,14 @@
 				{
 					"subject":"Bluetooth 蓝牙组件",
 					"mdlink":"bluetooth"
+				},
+				{
+					"subject":"UmengMtj 友盟统计组件",
+					"mdlink":"umengmtj"
+				},
+				{
+					"subject":"Mail 邮件相关操作组件",
+					"mdlink":"mail"
 				}
 				
 				

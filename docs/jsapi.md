@@ -108,99 +108,85 @@ Sprite采用CommonJS规范，通过require("模块标识")来实现对系统api�
 
 > [Bluetooth：蓝牙通信类](https://gitdocument.exmobi.cn/sprite-api/bluetooth.html) 
 > 
-> [Nfc：近场通信类]() 
+> [Nfc：近场通信类](https://gitdocument.exmobi.cn/sprite-api/nfc.html) 
 > 
 > [TouchId：指纹识别组件](https://gitdocument.exmobi.cn/sprite-api/touchid.html)；
 
 
 **图片处理**  
 
-> Image：图片处理相关类 
-> 
-> openDrawingBoard打开画图板操作界面等；
+> [ImageUtil：图片处理相关类](https://gitdocument.exmobi.cn/sprite-api/imageutil.html) 
+
+**日志相关**
+
+> [Console：日志输出类](https://gitdocument.exmobi.cn/sprite-api/console.html)
 
 
 **支付相关**  
 
 
-> AliPay：支付宝操作类 
+> [AliPay：支付宝操作类](https://gitdocument.exmobi.cn/sprite-api/alipay.html) 
 > 
-> WxPay：微信支付操作类 
+> [Weixin：微信支付操作类](https://gitdocument.exmobi.cn/sprite-api/weixin.html) 
 > 
-> UpPay：银联支付操作类 
-> 
-> IapPay：苹果虚拟支付工具类
+> [IapPay：苹果虚拟支付工具类](https://gitdocument.exmobi.cn/sprite-api/iappay.html)
 
 
 **VPN相关**  
 
-> Sangfor：深信服vpn类 
+> [SangforVpn：深信服vpn类](https://gitdocument.exmobi.cn/sprite-api/sangforvpn.html) 
 
 **分享相关**  
 
-> Qq：QQ分享操作类 
+> [Qq：QQ分享操作类](https://gitdocument.exmobi.cn/sprite-api/qq.html) 
 > 
-> WeiBo：微博分享操作类 
+> [WeiBo：微博分享操作类](https://gitdocument.exmobi.cn/sprite-api/weibo.html) 
 > 
-> WeiXin：微信分享操作类 
+> [WeiXin：微信分享操作类](https://gitdocument.exmobi.cn/sprite-api/weixin.html) 
 > 
-> ShareUtil：综合分享工具类，提供如一键分享等方法
+> [Share：综合分享工具类，提供如一键分享等方法](https://gitdocument.exmobi.cn/sprite-api/share.html)
 
 
 **推送push**  
 
-> LocationPush：本地通知相关类
+> [ExMobiPush  烽火push操作类](https://gitdocument.exmobi.cn/sprite-api/exmobipush.html)
 > 
-> FhPush：烽火Push操作类 
-> 
-> BaiduPush：百度Push操作类 
-> 
-> GeTuiPush：个推Push操作类 
-> 
-> AjPush：极光Push操作类
+> [JPush：极光Push操作类](https://gitdocument.exmobi.cn/sprite-api/jpush.html)
 
 
 **IM聊天**  
 
-> FhIm：烽火Im操作类 
+> [FhIm：烽火Im操作类](https://gitdocument.exmobi.cn/sprite-api/fhim.html) 
 > 
-> RlyIm：容联云操作类
+> [RlyIm：容联云操作类](https://gitdocument.exmobi.cn/sprite-api/rlyIm.html)
 
-
-**客服系统**  
-
-> MeChat：美洽客服类
 
 
 **统计相关**  
 
-> UmengMtj：友盟日志统计
-> 
-> BaiduMtj：百度日志统计
+> [UmengMtj：友盟日志统计]()
 
 
-**身份证识别**  
-
-> HwCard：汉王身份证
 
 **语音合成**  
 
-> BaiduTts：百度语音合成
+> [BaiduTts：百度语音合成](https://gitdocument.exmobi.cn/sprite-api/baidutts.html)
 > 
-> BaiduVoice：百度语音识别
+> [BaiduVoice：百度语音识别](https://gitdocument.exmobi.cn/sprite-api/baiduvoice.html)
 
 **短信验证码发送**
 
-> Mob：mob免费短信工具类  
+> [Mob：mob免费短信工具类]()  
 
-**打车**  
-
-> Didi：滴滴打车
 
 
 **ExMobi服务器对接**  
 
-> AccessAuth：ExMobi服务器鉴权组件类 
+> [AccessAuth：ExMobi服务器鉴权组件类](https://gitdocument.exmobi.cn/sprite-api/accessauth.html) 
+
+**邮件**
+
+> [Mail:邮件相关操作类]()
 
 
 <h2 id="cid_2">js组件打包功能分类</h2>
