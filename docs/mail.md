@@ -34,6 +34,7 @@ Mail为外置组件。
 > [sendMessage(jsonData:Object,callbackFun:Function):void Smtp标准协议发送邮件](#ff_10)
 > 
 > **Mplus自定义发送**
+> 
 > [sendMplusMessage(jsonData:Object,callbackFun:Function):void 连接Mplus邮件服务器使用自定义接口发送邮件](#ff_11)
 > 
 
@@ -199,7 +200,7 @@ callbackFun：邮箱收取回调，该函数具有json类型入参，入参定�
 > 
 > - sendDate：邮件发送时间，字符串类型，格式：yy-MM-dd HH: mm: ss;
 > 
-> - form：发件人邮箱，json格式定义如下：
+> - fromm：发件人邮箱，json格式定义如下：
 > 
 >  - name：发件人名称，字符串类型；
 >  
