@@ -4,7 +4,7 @@
 
 Mob平台提供了免费短信&语音验证码SDK，可以实现短信&语音验证功能。Mob最大的特点是应用再该平台申请通过后每天1万免费额度，适合刚起步的应用。使用前需到mob.com注册账号获得appKey和secretKey。Mob短信验证码流程：[http://wiki.mob.com/smssdk-web-1-3-0verify/](http://wiki.mob.com/smssdk-web-1-3-0verify/)
 
-Mob免费短信&语音验证码类，位置组件
+Mob免费短信&语音验证码类，外置组件
 
 <h2 id="cid_1">方法</h2>
 
