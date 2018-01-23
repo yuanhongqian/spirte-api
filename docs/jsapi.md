@@ -314,3 +314,12 @@ Sprite采用CommonJS规范，通过require("模块标识")来实现对系统api�
 > [Nfc](https://gitdocument.exmobi.cn/sprite-api/nfc.html)
 > 
 > [FhIm](https://gitdocument.exmobi.cn/sprite-api/fhim.html)
+> 
+> [Bluetooth](https://gitdocument.exmobi.cn/sprite-api/bluetooth.html) 
+> 
+> [UmengMtj](https://gitdocument.exmobi.cn/sprite-api/umengmtj.html)
+> 
+> [Mail](https://gitdocument.exmobi.cn/sprite-api/mail.html)
+> [MeiQia](https://gitdocument.exmobi.cn/sprite-api/meiqia.html)
+> 
+> [Gee]()
