@@ -419,6 +419,10 @@
 				{
 					"subject":"Gee 极验图形验证码组件",
 					"mdlink":"gee"
+				},
+				{
+					"subject":"GaodeMapUtil 高德地图工具类",
+					"mdlink":"gaodemaputil"
 				}
 				
 				
