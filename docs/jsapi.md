@@ -322,4 +322,8 @@ Sprite采用CommonJS规范，通过require("模块标识")来实现对系统api�
 > [Mail](https://gitdocument.exmobi.cn/sprite-api/mail.html)
 > [MeiQia](https://gitdocument.exmobi.cn/sprite-api/meiqia.html)
 > 
-> [Gee]()
+> [Gee](https://gitdocument.exmobi.cn/sprite-api/gee.html)
+> 
+> [GaodeMapUtil](https://gitdocument.exmobi.cn/sprite-api/gaodemaputil.html)
+> 
+> [X5Util](https://gitdocument.exmobi.cn/sprite-api/x5util.html)
