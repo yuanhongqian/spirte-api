@@ -50,7 +50,6 @@ require.json示例
 	 	},
 	    "cssPaths":{
 			"MVVM":"agile/css/mvvm.css"
-
 	 	},
 	    "componentPaths":{
 			"FHBUTTON":"res:testSprite/temp/fhbutton.component"
