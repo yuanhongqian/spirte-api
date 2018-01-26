@@ -30,12 +30,12 @@ module.exports.sum = sumValue;
 
 示例：文件名test.js
 
-```
-//调用calculate.js模块sum函数
-var calculate = require("res:js/calculate.js");
 
-var result = calculate.sum(8,12);
-```
+	//调用calculate.js模块sum函数
+	var calculate = require("res:js/calculate.js");
+
+	var result = calculate.sum(8,12);
+
 
 
 <h2 id="cid_3">require.js配置</h2>
@@ -43,23 +43,23 @@ var result = calculate.sum(8,12);
 通过应用入口app.json指定require.json来配置js文件加载路径，支持应用级配置。
 
 require.json示例
+		
+     {
+		"jsPaths":{
+			"CK":"res:testSprite/agile/ck.js"
+	 	},
+	    "cssPaths":{
+			"MVVM":"agile/css/mvvm.css"
 
-```
-{
-	"jsPaths":{
-		"CK":"res:testSprite/agile/ck.js"
-	},
-	"cssPaths":{
-		"MVVM":"agile/css/mvvm.css"
-
-	},
-	"componentPaths":{
-		"FHBUTTON":"res:testSprite/temp/fhbutton.component"
+	 	},
+	    "componentPaths":{
+			"FHBUTTON":"res:testSprite/temp/fhbutton.component"
+		}
 	}
-}
-//页面中使用
-require(CK);
-```
+	//页面中使用
+	require(CK);
+
+
 
 <h2 id="cid_4">优先级</h2>
 
