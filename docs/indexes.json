@@ -444,6 +444,15 @@
 					"mdlink": "spritegf"
 				}
 			 ]
+        },
+		{
+			"group": "JS外部导入",
+			"contains": [
+				{
+					"subject": "定义JS函数",
+					"mdlink": "definejs"
+				}
+			 ]
         }
     ]
 }
