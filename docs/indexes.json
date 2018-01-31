@@ -453,6 +453,33 @@
 					"mdlink": "definejs"
 				}
 			 ]
+        },
+		{
+			"group": "CSS外部导入",
+			"contains": [
+				{
+					"subject": "CSS外部导入",
+					"mdlink": "definecss"
+				}
+			 ]
+        },
+		{
+			"group": "横竖屏切换",
+			"contains": [
+				{
+					"subject": "横竖屏切换",
+					"mdlink": "orientation"
+				}
+			 ]
+        },
+		{
+			"group": "JS后台执行环境",
+			"contains": [
+				{
+					"subject": "JS后台执行环境",
+					"mdlink": "jsservice"
+				}
+			 ]
         }
     ]
 }
