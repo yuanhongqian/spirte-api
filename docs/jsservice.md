@@ -1,20 +1,20 @@
 # Js后台执行环境
 
-
+---------
 <h2 id="cid_0">背景</h2>
-
+------
 JsService独立于页面存在，可与页面Js实例在JS runtime中并行运行，支持同时运行多个后台JsService示例，JsService实例的生命周期包括创建、刷新、销毁。JsService可实现后台定位，后台上传，后台下载等相关功能。
 
 
 <h2 id="cid_1">使用范围</h2>
-
+------
 
 <image src="image/jsservice_1.png"/>
 
 
 
 <h2 id="cid_2">注意事项</h2>
-
+--------
 JsService环境独立于页面，不包含UI元素，因此请不要调用任何包含UI或者UI操作的组件函数，否则会产生不可预知的后果。
 
 Android：采用进程独立的service后台服务来承载JsService，因此程序退出后，后台服务仍然可以正常运行。
@@ -23,7 +23,7 @@ iOS：采用独立于页面Js操作类来承载JsService，由于iOS系统限制
 
 
 <h2 id="cid_3">数据交互</h2>
-
+-------
 JsService与普通页面之间可通过以下方法实现数据交互，包括：
 
 1：内存数据，如：MemCache应用级存储（程序关闭后不可用），Clipboard系统剪切板等；
@@ -36,7 +36,7 @@ JsService与普通页面之间可通过以下方法实现数据交互，包括�
 
 
 <h2 id="cid_4">方法</h2>
-
+--------
 JsService 后台JS环境操作类，外置组件。
 
 本节目录：
@@ -95,7 +95,7 @@ jsonData：传递参数，json类型，必选项，定义如下：
 
 
 <h2 id="cid_5">后台Js环境</h2>
-
+-------------
 待运行的后台Js需写入后缀为.js的文件中，通过定义的module.exports对象来标识，固定包含created初始化函数，destroy销毁函数。
 
 **初始化**
